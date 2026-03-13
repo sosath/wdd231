@@ -4,18 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normalize Activity | WDD231</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
+    <title>Course Home Page WDD231</title>
+    <meta name="description"
+        content="Home page of the WDD 231 course: Web Development, with information about courses and projects by Thomas Sosa.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 650px)">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Normalize Project</h1>
+        <div class="logo-area">
+            <img src="images/logo.svg" alt="Logo de Thomas Sosa" width="60" height="60">
+            <span>Thomas Sosa Lijeron</span>
+        </div>
+        <button id="menu" aria-label="Abrir menú"></button>
+        <nav>
+            <ul class="navigation">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <p>This site uses normalize.css to look consistent.</p>
+        <h1>Home</h1>
+        <div class="top-sections">
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <p>Hi, I'm Thomas. I'm currently finishing my first certificate in Software and Web Development.
+                    I'm passionate about responsive design and data analysis. I live in Santa Cruz, Bolivia, and
+                    I enjoy creating web solutions that are both functional and aesthetically pleasing.</p>
+            </section>
+            <section class="card photo-section">
+                <h2>Student Photo</h2>
+                <img src="images/thomas-profile.webp" alt="Foto de perfil de Thomas Sosa" loading="lazy">
+            </section>
+        </div>
+        <section class="card certificate-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="all-btn">All</button>
+                <button id="cse-btn">CSE</button>
+                <button id="wdd-btn">WDD</button>
+            </div>
+            <div id="course-container" class="course-grid">
+            </div>
+            <p class="credit-total">Total credits required: <span id="total-credits"></span></p>
+        </section>
     </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/thomas-sl/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/sosath" target="_blank" aria-label="GitHub">
+                <img src="images/github-icon.svg" alt="GitHub Logo">
+            </a>
+            <a href="https://x.com/SosaThomas79556" target="_blank" aria-label="X (Twitter)">
+                <img src="images/x-icon.svg" alt="X Logo">
+            </a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> Thomas Sosa Lijeron | Santa Cruz, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

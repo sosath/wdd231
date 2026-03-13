@@ -1,0 +1,57 @@
+header {
+    display: block;
+    border-bottom: none;
+}
+
+.logo-area {
+    padding: 1.5rem 2rem;
+}
+
+#menu {
+    display: none;
+}
+
+.navigation {
+    display: flex !important;
+    justify-content: flex-start;
+    padding: 0 2rem;
+}
+
+.navigation li {
+    flex: 0 1 auto;
+    max-width: none;
+}
+
+.navigation li a {
+    border-top: none;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid var(--nav-separator);
+    transition: background 0.3s;
+}
+
+.navigation li:first-child a {
+    border-left: 1px solid var(--nav-separator);
+}
+
+.navigation li a:hover {
+    background-color: var(--nav-hover);
+}
+
+.top-sections {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.filters {
+    gap: 20px;
+    padding: 1rem 2rem;
+}
+
+.course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 2rem 2rem 2rem;
+}
