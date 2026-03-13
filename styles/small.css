@@ -124,7 +124,6 @@ h1 {
     background-color: var(--light-bg);
     margin: 0;
     padding: 1.5rem;
-    flex-grow: 1;
 }
 
 .photo-section {
