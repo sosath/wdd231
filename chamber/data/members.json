@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Santa Cruz Web Services",
+        "address": "Av. San Martín 100",
+        "phone": "800-555-1234",
+        "email": "info@scws.com",
+        "website": "https://example.com/scws",
+        "image": "images/member1.webp",
+        "membershipLevel": 3,
+        "info": "Comprehensive digital solutions"
+    },
+    {
+        "name": "Desarrollo y Código SCZ",
+        "address": "Rene Moreno Street 45",
+        "phone": "800-555-2222",
+        "email": "contacto@devcode.com",
+        "website": "https://example.com/devcode",
+        "image": "images/member2.webp",
+        "membershipLevel": 2,
+        "info": "Experts in CSS Grid and Flexbox"
+    },
+    {
+        "name": "Innovación Tecnológica",
+        "address": "Av. Cristo Redentor Km 2",
+        "phone": "800-555-3333",
+        "email": "soporte@innovacion.com",
+        "website": "https://example.com/innovacion",
+        "image": "images/member3.webp",
+        "membershipLevel": 1,
+        "info": "Hardware and maintenance"
+    },
+    {
+        "name": "Camba Tech Analytics",
+        "address": "Barrio Urbarí, Calle 3",
+        "phone": "800-555-4444",
+        "email": "data@cambatech.com",
+        "website": "https://example.com/cambatech",
+        "image": "images/member4.webp",
+        "membershipLevel": 3,
+        "info": "Data analysis"
+    },
+    {
+        "name": "Diseño Creativo",
+        "address": "Doble Vía a La Guardia Km 4",
+        "phone": "800-555-5555",
+        "email": "hola@diseno.com",
+        "website": "https://example.com/diseno",
+        "image": "images/member5.webp",
+        "membershipLevel": 2,
+        "info": "Branding and corporate identity"
+    },
+    {
+        "name": "Consultora B1 English",
+        "address": "Av. Busch 400",
+        "phone": "800-555-6666",
+        "email": "learn@b1english.com",
+        "website": "https://example.com/b1",
+        "image": "images/member6.webp",
+        "membershipLevel": 1,
+        "info": "Business training"
+    },
+    {
+        "name": "Bolivia Turismo Digital",
+        "address": "Plaza 24 de Septiembre",
+        "phone": "800-555-7777",
+        "email": "tours@boliviaturismo.com",
+        "website": "https://example.com/boliviaturismo",
+        "image": "images/member7.webp",
+        "membershipLevel": 3,
+        "info": "Interactive digital guides"
+    }
+]

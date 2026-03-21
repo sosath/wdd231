@@ -1,0 +1,90 @@
+@media screen and (min-width: 768px) {
+
+    .header-container {
+        padding: 1rem 2rem;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .nav-controls-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    .desktop-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .desktop-nav a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: bold;
+    }
+
+    #directory-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    #directory-container.list .member-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #directory-container.list .card-header {
+        flex: 1;
+        padding: 10px;
+    }
+
+    #directory-container.list .card-body {
+        flex: 2;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    #directory-container.list .card-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 5%;
+    }
+
+    .footer-col.contact-info {
+        text-align: left;
+        flex: 1;
+    }
+
+    .footer-col.social-icons {
+        justify-content: center;
+        flex: 1;
+    }
+
+    .footer-col.dev-info {
+        text-align: right;
+        flex: 1;
+    }
+}
