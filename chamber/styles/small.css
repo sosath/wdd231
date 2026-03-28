@@ -303,6 +303,10 @@ body.dark-mode .social-icons img {
     width: 90%;
     color: #ffffff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
 }
 
 .hero-content h2 {
