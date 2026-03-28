@@ -1,18 +1,29 @@
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+const currentYearElement = document.getElementById('currentyear');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
+
+const lastModifiedElement = document.getElementById('lastModified');
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = document.lastModified;
+}
 
 const menuBtn = document.getElementById('menu-btn');
 const mobileNav = document.getElementById('mobile-nav');
 
-menuBtn.addEventListener('click', () => {
-    mobileNav.classList.toggle('open');
-    menuBtn.textContent = mobileNav.classList.contains('open') ? '✖' : '☰';
-});
+if (menuBtn && mobileNav) {
+    menuBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        menuBtn.textContent = mobileNav.classList.contains('open') ? '✖' : '☰';
+    });
+}
 
 const darkModeBtn = document.getElementById('dark-mode-btn');
-darkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+if (darkModeBtn) {
+    darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+}
 
 const url = 'data/members.json';
 const directoryContainer = document.getElementById('directory-container');
@@ -21,13 +32,17 @@ async function getMembersData() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        displayMembers(data);
+        if (directoryContainer) {
+            displayMembers(data);
+        }
     } catch (error) {
         console.error('Error fetching member data:', error);
     }
 }
 
 const displayMembers = (members) => {
+    if (!directoryContainer) return;
+
     directoryContainer.innerHTML = '';
 
     members.forEach((member) => {
@@ -59,14 +74,16 @@ const displayMembers = (members) => {
 const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
 
-gridBtn.addEventListener('click', () => {
-    directoryContainer.classList.add('grid');
-    directoryContainer.classList.remove('list');
-});
+if (gridBtn && listBtn && directoryContainer) {
+    gridBtn.addEventListener('click', () => {
+        directoryContainer.classList.add('grid');
+        directoryContainer.classList.remove('list');
+    });
 
-listBtn.addEventListener('click', () => {
-    directoryContainer.classList.add('list');
-    directoryContainer.classList.remove('grid');
-});
+    listBtn.addEventListener('click', () => {
+        directoryContainer.classList.add('list');
+        directoryContainer.classList.remove('grid');
+    });
+}
 
 getMembersData();
