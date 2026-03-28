@@ -55,6 +55,11 @@ header {
     gap: 10px;
 }
 
+body.dark-mode .logo-container img {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
 .site-title h1 {
     font-size: 1.2rem;
     margin: 0;
@@ -247,16 +252,172 @@ footer {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 48px;
+    align-items: center;
 }
 
 .social-icons a {
-    font-size: 2rem;
+    font-size: 3rem;
     text-decoration: none;
     color: var(--text-dark);
+}
+
+.social-icons img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode .social-icons img {
+    filter: brightness(0) invert(1);
 }
 
 .dev-info p,
 .contact-info p {
     margin-bottom: 5px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #003d82;
+}
+
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-medium);
+    padding-bottom: 0.5rem;
+}
+
+.event-list {
+    list-style-type: none;
+}
+
+.event-list li {
+    margin-bottom: 1rem;
+}
+
+.event-list p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.weather-current {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.weather-current img {
+    vertical-align: middle;
+}
+
+.weather-forecast {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.spotlights-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.spotlights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+    color: #0056b3;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.desktop-nav a.active,
+.mobile-nav a.active {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    font-weight: bold;
+}
+
+body.dark-mode .desktop-nav a:hover,
+body.dark-mode .mobile-nav a:hover {
+    color: #66b2ff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .desktop-nav a.active,
+body.dark-mode .mobile-nav a.active {
+    color: #66b2ff;
+    border-bottom-color: #66b2ff;
 }

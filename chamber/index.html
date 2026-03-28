@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Santa Cruz Chamber of Commerce</title>
+    <title>Home | Santa Cruz Chamber of Commerce</title>
     <meta name="description"
-        content="Official members directory of the Santa Cruz Chamber of Commerce. Find local businesses and services.">
+        content="Welcome to the Santa Cruz Chamber of Commerce. Discover local businesses, join our community, and stay updated with local events and weather.">
     <meta name="author" content="Thomas Sosa Lijeron">
-    <meta property="og:title" content="Directory - Santa Cruz Chamber of Commerce">
+    <meta property="og:title" content="Home - Santa Cruz Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://sosath.github.io/chamber/images/og-image.webp">
-    <meta property="og:url" content="https://sosath.github.io/chamber/directory.html">
+    <meta property="og:image" content="https://sosath.github.io/chamber/images/og-home.webp">
+    <meta property="og:url" content="https://sosath.github.io/chamber/index.html">
     <meta property="og:description"
-        content="Explore the official directory of businesses affiliated with the Chamber of Commerce.">
+        content="Join the Santa Cruz Chamber of Commerce to connect, grow, and succeed in our local business community.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <script src="scripts/home.js" defer></script>
     <script src="scripts/directory.js" defer></script>
 </head>
 
@@ -39,8 +40,8 @@
             <div class="nav-controls-container">
                 <nav id="primary-nav" class="desktop-nav">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="directory.html" class="active">Directory</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
                         <li><a href="join.html">Join</a></li>
                         <li><a href="discover.html">Discover</a></li>
                     </ul>
@@ -54,22 +55,63 @@
 
         <nav id="mobile-nav" class="mobile-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Business Directory</h2>
-        <div class="view-toggles">
-            <button id="grid-btn" aria-label="Grid View">🔲 Grid</button>
-            <button id="list-btn" aria-label="List View">📄 List</button>
+    <main class="home-main">
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Santa Cruz Business District" width="100%" height="auto">
+            </picture>
+            <div class="hero-content">
+                <h2>Empowering Local Business</h2>
+                <p>Join the network that drives growth and innovation in our city.</p>
+                <a href="join.html" class="cta-button">Join the Chamber Today!</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events-card card">
+                <h3>Current Events</h3>
+                <ul class="event-list">
+                    <li>
+                        <strong>Oct 15:</strong> Business Networking Expo
+                        <p>Connect with local leaders at the central plaza.</p>
+                    </li>
+                    <li>
+                        <strong>Nov 02:</strong> Tech Startups Seminar
+                        <p>Insights into the digital economy.</p>
+                    </li>
+                    <li>
+                        <strong>Dec 10:</strong> Annual Gala Dinner
+                        <p>Celebrating our community achievements.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="weather-card card">
+                <h3>Weather in Santa Cruz</h3>
+                <div id="current-weather" class="weather-current">
+                    <p>Loading current weather...</p>
+                </div>
+                <hr>
+                <h4>3-Day Forecast</h4>
+                <div id="weather-forecast" class="weather-forecast">
+                </div>
+            </section>
         </div>
 
-        <div id="directory-container" class="grid"></div>
+        <section class="spotlights-section">
+            <h3>Member Spotlights</h3>
+            <div id="spotlights-container" class="spotlights-grid">
+            </div>
+        </section>
     </main>
 
     <footer>
