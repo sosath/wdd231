@@ -207,6 +207,10 @@ main h2 {
     text-decoration: none;
 }
 
+#directory-container {
+    min-height: 80vh;
+}
+
 #directory-container.list {
     display: flex;
     flex-direction: column;
