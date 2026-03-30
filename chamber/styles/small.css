@@ -425,3 +425,11 @@ body.dark-mode .mobile-nav a.active {
     color: #66b2ff;
     border-bottom-color: #66b2ff;
 }
+
+.card-info a:hover {
+    background-color: var(--text-dark);
+    color: var(--body-bg);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
