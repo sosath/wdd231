@@ -10,6 +10,8 @@
     --border-dark: #aaaaaa;
     --card-header-bg: #c0c0c0;
     --transparent: #00000000;
+    --white: #ffffff;
+    --hero-bg-tint: rgba(0, 0, 0, 0.4);
 }
 
 body.dark-mode {
@@ -301,12 +303,11 @@ body.dark-mode .social-icons img {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    color: #ffffff;
+    color: var(--white);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--hero-bg-tint);
     padding: 20px;
     border-radius: 8px;
-    color: #ffffff;
 }
 
 .hero-content h2 {
