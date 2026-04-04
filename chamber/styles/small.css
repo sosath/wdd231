@@ -12,6 +12,27 @@
     --transparent: #00000000;
     --white: #ffffff;
     --hero-bg-tint: rgba(0, 0, 0, 0.4);
+    --required-color: #8B0000;
+    --success-color: #1B5E20;
+    --success-hover: #2e7d32;
+    --info-btn-color: #34495e;
+    --info-btn-hover: #23395f;
+    --success-icon: #4CAF50;
+    --error-color: #f44336;
+    --green-light-bg: rgba(27, 94, 32, 0.05);
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+    --text-muted: #666666;
+    --primary-blue: #0056b3;
+    --primary-blue-dark: #003d82;
+    --blue-light-bg: rgba(33, 150, 243, 0.05);
+    --blue-light-text: #66B2FF;
+    --green-light-text: #66BB6A;
+    --text-light-dark: #aaaaaa;
+    --text-light-lighter: #bbbbbb;
+    --dark-input-bg: #3a3a3a;
+    --dark-input-border: #555555;
+    --dark-text-light: #cccccc;
+    --dark-box-bg: #3a3a3a;
 }
 
 body.dark-mode {
