@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Santa Cruz Chamber of Commerce</title>
+    <meta name="description"
+        content="Join the Santa Cruz Chamber of Commerce. Apply for membership and become part of our thriving business community.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+    <meta property="og:title" content="Join - Santa Cruz Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sosath.github.io/wdd231/chamber/images/og-home.webp">
+    <meta property="og:url" content="https://sosath.github.io/chamber/join.html">
+    <meta property="og:description"
+        content="Apply to join the Santa Cruz Chamber of Commerce and unlock membership benefits.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Chamber Logo" width="60" height="60">
+                <div class="site-title">
+                    <h1>Santa Cruz</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <div class="nav-controls-container">
+                <nav id="primary-nav" class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html" class="active">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <button id="dark-mode-btn" aria-label="Toggle Dark Mode">🌓</button>
+                    <button id="menu-btn" aria-label="Open menu">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h2>Join the Chamber of Commerce</h2>
+        <p class="intro-text">Fill out the form below to apply for membership and gain access to exclusive benefits and
+            networking opportunities.</p>
+
+        <div class="join-container">
+            <!-- Form Section -->
+            <section class="form-section">
+                <form method="get" action="thankyou.html" id="membership-form">
+                    <!-- First Name -->
+                    <label for="first-name">
+                        First Name
+                        <input type="text" id="first-name" name="first-name" title="First Name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <!-- Last Name -->
+                    <label for="last-name">
+                        Last Name
+                        <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name"
+                            required>
+                    </label>
+
+                    <!-- Organizational Title -->
+                    <label for="org-title">
+                        Organizational Title
+                        <input type="text" id="org-title" name="org-title" title="Organizational Title"
+                            autocomplete="organization-title" pattern="^[a-zA-Z\s\-]{7,}$"
+                            placeholder="e.g., Chief Executive Officer">
+                    </label>
+
+                    <!-- Email -->
+                    <label for="email">
+                        Email Address
+                        <input type="email" id="email" name="email" title="Email Address" autocomplete="email"
+                            placeholder="example@domain.com" required>
+                    </label>
+
+                    <!-- Phone -->
+                    <label for="phone">
+                        Mobile Phone Number
+                        <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel"
+                            required>
+                    </label>
+
+                    <!-- Organization Name -->
+                    <label for="org-name">
+                        Business/Organization Name
+                        <input type="text" id="org-name" name="org-name" title="Organization Name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label for="membership-level">
+                        Membership Level
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="">-- Select a Membership Level --</option>
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- Business Description -->
+                    <label for="description">
+                        Business/Organization Description
+                        <textarea id="description" name="description" title="Business Description" rows="5"
+                            placeholder="Tell us about your business or organization..."></textarea>
+                    </label>
+
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </section>
+
+            <!-- Membership Levels Section -->
+            <section class="membership-levels">
+                <h3>Membership Levels</h3>
+                <div class="levels-container">
+                    <!-- NP Membership Card -->
+                    <div class="membership-card np-card">
+                        <h4>NP Membership</h4>
+                        <p class="price">Free</p>
+                        <p class="description">For non-profit organizations</p>
+                        <button class="info-btn" data-level="np" aria-label="Learn more about NP Membership">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <!-- Bronze Membership Card -->
+                    <div class="membership-card bronze-card">
+                        <h4>Bronze Membership</h4>
+                        <p class="price">$99/year</p>
+                        <p class="description">Perfect for startups</p>
+                        <button class="info-btn" data-level="bronze" aria-label="Learn more about Bronze Membership">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <!-- Silver Membership Card -->
+                    <div class="membership-card silver-card">
+                        <h4>Silver Membership</h4>
+                        <p class="price">$199/year</p>
+                        <p class="description">Growing businesses</p>
+                        <button class="info-btn" data-level="silver" aria-label="Learn more about Silver Membership">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <!-- Gold Membership Card -->
+                    <div class="membership-card gold-card">
+                        <h4>Gold Membership</h4>
+                        <p class="price">$299/year</p>
+                        <p class="description">Established companies</p>
+                        <button class="info-btn" data-level="gold" aria-label="Learn more about Gold Membership">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modals for Membership Benefits -->
+        <!-- NP Membership Modal -->
+        <div id="modal-np" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">✕</button>
+                <h3>NP Membership Benefits</h3>
+                <ul class="benefits-list">
+                    <li>✓ Access to networking events</li>
+                    <li>✓ Community directory listing</li>
+                    <li>✓ Monthly newsletter</li>
+                    <li>✓ Partnership opportunities</li>
+                </ul>
+                <p class="modal-description">Our NP Membership is designed to support non-profit organizations in our
+                    community. Connect with other mission-driven organizations and expand your network.</p>
+            </div>
+        </div>
+
+        <!-- Bronze Membership Modal -->
+        <div id="modal-bronze" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">✕</button>
+                <h3>Bronze Membership Benefits</h3>
+                <ul class="benefits-list">
+                    <li>✓ All NP benefits</li>
+                    <li>✓ Spotlight on home page</li>
+                    <li>✓ Exclusive webinars & training</li>
+                    <li>✓ Event discounts (10%)</li>
+                    <li>✓ Social media promotion</li>
+                </ul>
+                <p class="modal-description">Perfect for new businesses looking to establish their presence in the
+                    community. Get started with our essential business support package.</p>
+            </div>
+        </div>
+
+        <!-- Silver Membership Modal -->
+        <div id="modal-silver" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">✕</button>
+                <h3>Silver Membership Benefits</h3>
+                <ul class="benefits-list">
+                    <li>✓ All Bronze benefits</li>
+                    <li>✓ Priority spotlight (2x/year)</li>
+                    <li>✓ Advertising opportunities</li>
+                    <li>✓ Event discounts (15%)</li>
+                    <li>✓ VIP networking events</li>
+                    <li>✓ Business training sessions</li>
+                </ul>
+                <p class="modal-description">Designed for growing businesses ready to expand their reach. Enjoy premium
+                    visibility and exclusive opportunities.</p>
+            </div>
+        </div>
+
+        <!-- Gold Membership Modal -->
+        <div id="modal-gold" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">✕</button>
+                <h3>Gold Membership Benefits</h3>
+                <ul class="benefits-list">
+                    <li>✓ All Silver benefits</li>
+                    <li>✓ Premium spotlight (4x/year)</li>
+                    <li>✓ Featured advertising package</li>
+                    <li>✓ Event discounts (20%)</li>
+                    <li>✓ Executive networking dinners</li>
+                    <li>✓ Fully customized consultation</li>
+                    <li>✓ Dedicated account manager</li>
+                </ul>
+                <p class="modal-description">Our premium membership tier for established companies. Receive white-glove
+                    service and maximum visibility in the community.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-col contact-info">
+            <p><strong>Santa Cruz Chamber of Commerce</strong></p>
+            <p>123 Principal Street</p>
+            <p>Santa Cruz, Bolivia 999</p>
+            <p>info@sczchamber.org</p>
+            <p>(591) 3 333-0000</p>
+        </div>
+        <div class="footer-col social-icons">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <img src="images/youtube.svg" alt="YouTube" width="48" height="48">
+            </a>
+            <a href="https://x.com/SosaThomas79556" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <img src="images/twitter.svg" alt="Twitter" width="48" height="48">
+            </a>
+            <a href="https://www.linkedin.com/in/thomas-sl/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="48" height="48">
+            </a>
+        </div>
+        <div class="footer-col dev-info">
+            <p>WDD231 Class Project</p>
+            <p>Thomas Sosa Lijeron</p>
+            <p>&copy; <span id="currentyear"></span> Santa Cruz Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize year and modification date in footer
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
