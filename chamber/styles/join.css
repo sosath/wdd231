@@ -12,7 +12,7 @@
 
 .intro-text {
     text-align: center;
-    color: #666;
+    color: var(--text-dark);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -44,6 +44,12 @@ label {
     color: var(--text-dark);
 }
 
+.required {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-left: 0.2rem;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -65,8 +71,8 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    border-color: var(--border-medium);
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
 }
 
 input[type="text"]:invalid:not(:placeholder-shown),
@@ -82,8 +88,8 @@ textarea {
 
 .submit-btn {
     padding: 0.75rem 2rem;
-    background-color: #2e7d32;
-    color: white;
+    background-color: #1B5E20;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -94,9 +100,9 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #45a049;
+    background-color: #2e7d32;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
 }
 
 .submit-btn:active {
@@ -173,7 +179,7 @@ textarea {
 }
 
 .membership-card .description {
-    color: #666;
+    color: var(--text-dark);
     margin: 0.5rem 0 1.5rem 0;
     font-size: 0.95rem;
 }
@@ -181,7 +187,7 @@ textarea {
 .info-btn {
     padding: 0.6rem 1.2rem;
     background-color: #34495e;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -192,12 +198,12 @@ textarea {
 }
 
 .info-btn:hover {
-    background-color: #0b7dda;
+    background-color: #23395f;
     transform: translateY(-2px);
 }
 
 .info-btn:focus {
-    outline: 2px solid #2196F3;
+    outline: 2px solid #34495e;
     outline-offset: 2px;
 }
 
@@ -215,7 +221,7 @@ textarea {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease-out;
 }
 
@@ -284,13 +290,13 @@ textarea {
 }
 
 .modal-close:focus {
-    outline: 2px solid #2196F3;
+    outline: 2px solid #34495e;
     outline-offset: 2px;
 }
 
 .modal-content h3 {
     margin: 0 0 1.5rem 0;
-    color: #4CAF50;
+    color: #1B5E20;
     font-size: 1.3rem;
 }
 
@@ -312,7 +318,7 @@ textarea {
 }
 
 .modal-description {
-    color: #666;
+    color: var(--text-dark);
     line-height: 1.6;
     font-size: 0.95rem;
     margin: 0;
@@ -347,7 +353,7 @@ body.dark-mode .membership-card .price {
 }
 
 body.dark-mode .membership-card .description {
-    color: #bbb;
+    color: #ccc;
 }
 
 body.dark-mode .modal-content h3 {
@@ -355,7 +361,7 @@ body.dark-mode .modal-content h3 {
 }
 
 body.dark-mode .modal-description {
-    color: #bbb;
+    color: #ccc;
 }
 
 @media screen and (min-width: 768px) {

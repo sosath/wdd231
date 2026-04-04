@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join - Santa Cruz Chamber of Commerce</title>
+    <title>Join the Chamber - Santa Cruz Chamber of Commerce</title>
     <meta name="description"
         content="Join the Santa Cruz Chamber of Commerce. Apply for membership and become part of our thriving business community.">
     <meta name="author" content="Thomas Sosa Lijeron">
-    <meta property="og:title" content="Join the Santa Cruz Chamber of Commerce Today">
+    <meta property="og:title" content="Join Santa Cruz Chamber of Commerce Today">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sosath.github.io/wdd231/chamber/images/og-home.webp">
     <meta property="og:url" content="https://sosath.github.io/chamber/join.html">
@@ -72,13 +72,13 @@
             <section class="form-section">
                 <form method="get" action="thankyou.html" id="membership-form">
                     <label for="first-name">
-                        First Name
+                        First Name <span class="required">*</span>
                         <input type="text" id="first-name" name="first-name" title="First Name"
                             autocomplete="given-name" required>
                     </label>
 
                     <label for="last-name">
-                        Last Name
+                        Last Name <span class="required">*</span>
                         <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name"
                             required>
                     </label>
@@ -91,25 +91,25 @@
                     </label>
 
                     <label for="email">
-                        Email Address
+                        Email Address <span class="required">*</span>
                         <input type="email" id="email" name="email" title="Email Address" autocomplete="email"
                             placeholder="example@domain.com" required>
                     </label>
 
                     <label for="phone">
-                        Mobile Phone Number
+                        Mobile Phone Number <span class="required">*</span>
                         <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel"
                             required>
                     </label>
 
                     <label for="org-name">
-                        Business/Organization Name
+                        Business/Organization Name <span class="required">*</span>
                         <input type="text" id="org-name" name="org-name" title="Organization Name"
                             autocomplete="organization" required>
                     </label>
 
                     <label for="membership-level">
-                        Membership Level
+                        Membership Level <span class="required">*</span>
                         <select id="membership-level" name="membership-level" required>
                             <option value="">-- Select a Membership Level --</option>
                             <option value="np">NP Membership (Non-Profit)</option>

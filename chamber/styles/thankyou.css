@@ -71,7 +71,7 @@
 }
 
 .info-text {
-    color: #666;
+    color: var(--text-dark);
     line-height: 1.6;
     margin: 1rem 0 2rem 0;
     animation: fadeInUp 0.6s ease-out 0.4s both;
@@ -85,15 +85,15 @@ body.dark-mode .info-text {
     text-align: left;
     margin: 2rem 0;
     padding: 2rem;
-    background: rgba(76, 175, 80, 0.05);
-    border-left: 4px solid #4CAF50;
+    background: rgba(27, 94, 32, 0.05);
+    border-left: 4px solid #1B5E20;
     border-radius: 4px;
     animation: fadeInUp 0.6s ease-out 0.5s both;
 }
 
 .application-summary h3 {
     text-align: center;
-    color: #4CAF50;
+    color: #1B5E20;
     margin: 0 0 1.5rem 0;
     font-size: 1.3rem;
 }
@@ -142,7 +142,7 @@ body.dark-mode .detail-item p {
 }
 
 .next-steps h3 {
-    color: #2196F3;
+    color: #0056b3;
     margin: 0 0 1.5rem 0;
     font-size: 1.3rem;
 }
@@ -159,7 +159,7 @@ body.dark-mode .detail-item p {
 }
 
 .next-steps strong {
-    color: #2196F3;
+    color: #0056b3;
 }
 
 .cta-section {
@@ -193,34 +193,34 @@ body.dark-mode .detail-item p {
 }
 
 .btn-primary {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1B5E20;
+    color: var(--white);
 }
 
 .btn-primary:hover {
-    background-color: #45a049;
+    background-color: #2e7d32;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
 }
 
 .btn-primary:focus {
-    outline: 2px solid #4CAF50;
+    outline: 2px solid #1B5E20;
     outline-offset: 2px;
 }
 
 .btn-secondary {
-    background-color: #2196F3;
-    color: white;
+    background-color: #0056b3;
+    color: var(--white);
 }
 
 .btn-secondary:hover {
-    background-color: #0b7dda;
+    background-color: #003d82;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
 }
 
 .btn-secondary:focus {
-    outline: 2px solid #2196F3;
+    outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
 
@@ -254,25 +254,29 @@ body.dark-mode .detail-item p {
 }
 
 .contact-info-box a {
-    color: #2196F3;
+    color: #0056b3;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
 }
 
 .contact-info-box a:hover {
-    color: #0b7dda;
+    color: #003d82;
     text-decoration: underline;
 }
 
 .contact-info-box a:focus {
-    outline: 2px solid #2196F3;
+    outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
 
 body.dark-mode .application-summary {
-    background: rgba(76, 175, 80, 0.1);
+    background: rgba(27, 94, 32, 0.1);
     border-left-color: #66BB6A;
+}
+
+body.dark-mode .application-summary h3 {
+    color: #66BB6A;
 }
 
 body.dark-mode .application-summary h3 {
@@ -285,6 +289,14 @@ body.dark-mode .detail-item label {
 
 body.dark-mode .next-steps {
     background: rgba(33, 150, 243, 0.1);
+}
+
+body.dark-mode .next-steps h3 {
+    color: #66B2FF;
+}
+
+body.dark-mode .next-steps strong {
+    color: #66B2FF;
 }
 
 body.dark-mode .next-steps h3 {
