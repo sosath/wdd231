@@ -22,7 +22,6 @@ function initializeModals() {
             if (modal) {
                 modal.classList.add('show');
                 modal.setAttribute('aria-hidden', 'false');
-                // Trap focus in modal
                 trapFocus(modal);
             }
         });
@@ -111,7 +110,6 @@ function initializeMenuToggle() {
         menuBtn.textContent = mobileNav.classList.contains('open') ? '✖' : '☰';
     });
 
-    // Close menu when a link is clicked
     const mobileLinks = mobileNav.querySelectorAll('a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
