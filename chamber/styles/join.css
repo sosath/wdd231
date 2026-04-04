@@ -44,8 +44,12 @@ label {
     color: var(--text-dark);
 }
 
+.label-text {
+    display: inline;
+}
+
 .required {
-    color: #d32f2f;
+    color: #8B0000;
     font-weight: bold;
     margin-left: 0.2rem;
 }
@@ -221,7 +225,7 @@ textarea {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease-out;
 }
 
