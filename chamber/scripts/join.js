@@ -1,28 +1,20 @@
-// Join Page JavaScript
-
-// Set the timestamp when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     const now = new Date();
     const timestamp = now.toLocaleString();
     document.getElementById('timestamp').value = timestamp;
 
-    // Initialize modals
     initializeModals();
 
-    // Initialize dark mode if available from other pages
     loadDarkMode();
 
-    // Menu toggle if available
     initializeMenuToggle();
 });
 
-// Modal Management
 function initializeModals() {
     const infoButtons = document.querySelectorAll('.info-btn');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.modal-close');
 
-    // Open modal when clicking info button
     infoButtons.forEach(button => {
         button.addEventListener('click', () => {
             const level = button.getAttribute('data-level');
@@ -36,7 +28,6 @@ function initializeModals() {
         });
     });
 
-    // Close modal when clicking close button
     closeButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const modal = e.target.closest('.modal');
@@ -44,7 +35,6 @@ function initializeModals() {
         });
     });
 
-    // Close modal when clicking outside of it
     modals.forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
@@ -53,7 +43,6 @@ function initializeModals() {
         });
     });
 
-    // Close modal on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
@@ -70,7 +59,6 @@ function closeModal(modal) {
     modal.setAttribute('aria-hidden', 'true');
 }
 
-// Focus trap for modals (accessibility)
 function trapFocus(modal) {
     const focusableElements = modal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -95,12 +83,10 @@ function trapFocus(modal) {
     });
 }
 
-// Dark Mode Toggle
 function loadDarkMode() {
     const darkModeBtn = document.getElementById('dark-mode-btn');
     if (!darkModeBtn) return;
 
-    // Check for saved preference
     const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
 
     if (isDarkMode) {
@@ -114,7 +100,6 @@ function loadDarkMode() {
     });
 }
 
-// Menu Toggle for Mobile
 function initializeMenuToggle() {
     const menuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
@@ -136,14 +121,11 @@ function initializeMenuToggle() {
     });
 }
 
-// Form Validation
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('membership-form');
 
     if (form) {
         form.addEventListener('submit', (e) => {
-            // HTML5 validation will handle required fields
-            // Custom validation for org-title pattern if filled
             const orgTitle = document.getElementById('org-title');
             if (orgTitle.value) {
                 const pattern = /^[a-zA-Z\s\-]{7,}$/;
@@ -155,3 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
