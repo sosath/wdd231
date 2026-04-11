@@ -1,13 +1,11 @@
 import { attractions } from '../data/discover.mjs';
 
-// --- Visitor Tracking with localStorage ---
 function handleVisitorMessage() {
     const messageContainer = document.getElementById('visit-message');
     const lastVisitTime = localStorage.getItem('lastVisit');
     const currentDate = Date.now();
 
     if (!lastVisitTime) {
-        // First visit
         messageContainer.innerHTML = '<p class="visit-info welcome">Welcome! Let us know if you have any questions.</p>';
     } else {
         const lastDate = parseInt(lastVisitTime);
@@ -15,25 +13,20 @@ function handleVisitorMessage() {
         const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
         if (daysDifference === 0) {
-            // Less than a day
             messageContainer.innerHTML = '<p class="visit-info recent">Back so soon! Awesome!</p>';
         } else {
-            // More than a day
             const dayText = daysDifference === 1 ? 'day' : 'days';
             messageContainer.innerHTML = `<p class="visit-info">You last visited ${daysDifference} ${dayText} ago.</p>`;
         }
     }
 
-    // Update localStorage with current visit
     localStorage.setItem('lastVisit', currentDate.toString());
 }
 
-// --- Display Attractions ---
 function displayAttractions() {
     const container = document.getElementById('attractions-container');
     container.innerHTML = '';
 
-    // Create grid areas dynamically
     let gridTemplate = 'grid-template-areas: ';
     const rows = Math.ceil(attractions.length / 4);
 
@@ -56,12 +49,10 @@ function displayAttractions() {
     });
 }
 
-// --- Initialize ---
 document.addEventListener('DOMContentLoaded', () => {
     handleVisitorMessage();
     displayAttractions();
 
-    // Handle dark mode toggle
     const darkModeBtn = document.getElementById('dark-mode-btn');
     const savedTheme = localStorage.getItem('theme');
 
@@ -77,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
 
@@ -87,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Set current year and last modified date in footer
     const currentYear = new Date().getFullYear();
     const lastModified = document.lastModified;
 
