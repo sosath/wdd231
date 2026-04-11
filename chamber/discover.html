@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Santa Cruz Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover the attractions, culture, and landmarks of Santa Cruz. Explore 8 must-see destinations representing our city's rich heritage.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+    <meta property="og:title" content="Discover - Santa Cruz Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sosath.github.io/wdd231/chamber/images/og-home.webp">
+    <meta property="og:url" content="https://sosath.github.io/chamber/discover.html">
+    <meta property="og:description"
+        content="Discover the attractions, culture, and landmarks of Santa Cruz. Explore attractions and places of interest.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script src="scripts/discover.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Chamber Logo" width="60" height="60">
+                <div class="site-title">
+                    <h1>Santa Cruz</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <div class="nav-controls-container">
+                <nav id="primary-nav" class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html" class="active">Discover</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <button id="dark-mode-btn" aria-label="Toggle Dark Mode">🌓</button>
+                    <button id="menu-btn" aria-label="Open menu">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <section class="discover-hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Santa Cruz City Overview" width="1200" height="600">
+            </picture>
+            <div class="hero-discover-content">
+                <h2>Discover Santa Cruz</h2>
+                <p>Explore the rich culture, history, and attractions that make our city unique</p>
+            </div>
+        </section>
+
+        <div id="visit-message" class="visit-message"></div>
+
+        <article class="attractions-container" id="attractions-container">
+            <!-- Attractions will be loaded here by JavaScript -->
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-col contact-info">
+            <p><strong>Santa Cruz Chamber of Commerce</strong></p>
+            <p>123 Principal Street</p>
+            <p>Santa Cruz, Bolivia 999</p>
+            <p>info@sczchamber.org</p>
+            <p>(591) 3 333-0000</p>
+        </div>
+        <div class="footer-col social-icons">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <img src="images/youtube.svg" alt="YouTube" width="48" height="48">
+            </a>
+            <a href="https://x.com/SosaThomas79556" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <img src="images/twitter.svg" alt="Twitter" width="48" height="48">
+            </a>
+            <a href="https://www.linkedin.com/in/thomas-sl/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="48" height="48">
+            </a>
+        </div>
+        <div class="footer-col dev-info">
+            <p>WDD231 Class Project</p>
+            <p>Thomas Sosa Lijeron</p>
+            <p>&copy; <span id="currentyear"></span> Santa Cruz Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

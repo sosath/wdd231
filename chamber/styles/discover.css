@@ -1,0 +1,277 @@
+/* ===== DISCOVER PAGE STYLES ===== */
+
+.discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Discover Hero Section */
+.discover-hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.discover-hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.7);
+    display: block;
+}
+
+.hero-discover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-discover-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin: 0;
+}
+
+.hero-discover-content p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Visit Message Styles */
+.visit-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--blue-light-bg);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 4px;
+}
+
+.visit-info {
+    margin: 0;
+    font-weight: 500;
+    color: var(--primary-blue);
+}
+
+.visit-info.welcome {
+    font-size: 1.1rem;
+    color: var(--success-color);
+}
+
+.visit-info.recent {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+}
+
+/* --- SMALL SCREENS (320px - 640px) --- */
+.attractions-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8";
+}
+
+.attraction-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.attraction-card h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.attraction-card figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.attraction-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.attraction-card address {
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.attraction-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.learn-more-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--info-btn-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--info-btn-hover);
+}
+
+/* ===== MEDIUM SCREENS (641px - 1024px) ===== */
+@media screen and (min-width: 641px) {
+    .discover-hero img {
+        height: 350px;
+    }
+
+    .hero-discover-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-discover-content p {
+        font-size: 1.1rem;
+    }
+
+    .attractions-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "item7 item8";
+    }
+
+    .attraction-card {
+        padding: 1.2rem;
+    }
+
+    .attraction-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ===== LARGE SCREENS (1025px and above) ===== */
+@media screen and (min-width: 1025px) {
+    .discover-main {
+        padding: 2rem;
+    }
+
+    .discover-hero {
+        margin-bottom: 2.5rem;
+    }
+
+    .discover-hero img {
+        height: 400px;
+    }
+
+    .hero-discover-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .hero-discover-content p {
+        font-size: 1.2rem;
+    }
+
+    .attractions-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        grid-template-areas:
+            "item1 item2 item3 item4"
+            "item5 item6 item7 item8";
+    }
+
+    .attraction-card {
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .attraction-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .attraction-card h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Image hover effects (only on large screens, not on mobile) */
+    .attraction-card figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .attraction-card:hover figure img {
+        transform: scale(1.05);
+        filter: brightness(0.85) saturate(1.2);
+    }
+
+    .learn-more-btn {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .learn-more-btn:hover {
+        background-color: var(--info-btn-hover);
+        transform: scale(1.05);
+    }
+}
+
+/* Dark mode adjustments */
+body.dark-mode .discover-hero {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+}
+
+body.dark-mode .visit-message {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+body.dark-mode .attraction-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .attraction-card h2,
+body.dark-mode .attraction-card p {
+    color: var(--text-dark);
+}
+
+body.dark-mode .attraction-card address {
+    color: var(--text-light-dark);
+}
+
+body.dark-mode .learn-more-btn {
+    background-color: var(--info-btn-color);
+}
+
+body.dark-mode .learn-more-btn:hover {
+    background-color: var(--info-btn-hover);
+}
