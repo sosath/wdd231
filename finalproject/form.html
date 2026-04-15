@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Subscribe to the EuroStats newsletter and follow your favorite Champions League teams for match previews and statistical updates.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Newsletter &amp; Team Tracker – EuroStats">
+    <meta property="og:description"
+        content="Subscribe to EuroStats for Champions League match previews, standings updates, and in-depth analysis.">
+    <meta property="og:url" content="https://thomassosa.github.io/wdd231/finalproject/form.html">
+    <meta property="og:image" content="https://thomassosa.github.io/wdd231/finalproject/favicon.svg">
+    <meta name="twitter:card" content="summary">
+
+    <title>Newsletter – EuroStats</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="EuroStats Home">
+                <img src="favicon.svg" alt="" width="38" height="38" loading="lazy" aria-hidden="true">
+                <div class="logo-text">
+                    <span class="logo-name">EuroStats</span>
+                    <span class="logo-tagline">Football Analytics</span>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ═══════════════════ PAGE HERO ════════════════════ -->
+        <div class="page-hero">
+            <div class="page-hero-inner">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span aria-hidden="true">›</span>
+                    <span aria-current="page">Newsletter</span>
+                </nav>
+                <h1>Stay <span>Updated</span></h1>
+                <p>Subscribe to the EuroStats newsletter and never miss a match preview or performance report.</p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════ FORM SECTION ════════════════ -->
+        <div class="form-section">
+            <div class="form-card">
+                <h2 style="color:var(--primary);margin-bottom:0.4rem">Fan Registration</h2>
+                <p style="color:var(--light-text);font-size:0.88rem;margin-bottom:1.5rem">
+                    Fill in your details below. Fields marked with <span style="color:var(--danger)"
+                        aria-hidden="true">*</span> <span class="sr-only">asterisk</span> are required.
+                </p>
+
+                <!--
+          The form uses GET so that form-action.html can read
+          the submitted data from the URL query string.
+        -->
+                <form id="subscription-form" action="form-action.html" method="GET" novalidate
+                    aria-label="Newsletter subscription form">
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label class="form-label" for="fname">
+                            First Name <span class="required" aria-hidden="true">*</span>
+                        </label>
+                        <input class="form-input" type="text" id="fname" name="fname" placeholder="e.g. Thomas"
+                            autocomplete="given-name" required aria-required="true" minlength="2" maxlength="50">
+                        <p class="form-error" id="fname-error" role="alert">Please enter your first name (at least 2
+                            characters).</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="lname">
+                            Last Name <span class="required" aria-hidden="true">*</span>
+                        </label>
+                        <input class="form-input" type="text" id="lname" name="lname" placeholder="e.g. Sosa"
+                            autocomplete="family-name" required aria-required="true" minlength="2" maxlength="50">
+                        <p class="form-error" id="lname-error" role="alert">Please enter your last name.</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="form-label" for="email">
+                            Email Address <span class="required" aria-hidden="true">*</span>
+                        </label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com"
+                            autocomplete="email" required aria-required="true">
+                        <p class="form-error" id="email-error" role="alert">Please enter a valid email address.</p>
+                    </div>
+
+                    <!-- Favorite Team -->
+                    <div class="form-group">
+                        <label class="form-label" for="team">
+                            Favorite Team <span class="required" aria-hidden="true">*</span>
+                        </label>
+                        <select class="form-select" id="team" name="team" required aria-required="true">
+                            <option value="">— Select a club —</option>
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Liverpool">Liverpool</option>
+                            <option value="Inter Milan">Inter Milan</option>
+                            <option value="Arsenal">Arsenal</option>
+                            <option value="Atlético Madrid">Atlético Madrid</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+                            <option value="Benfica">Benfica</option>
+                            <option value="AC Milan">AC Milan</option>
+                            <option value="Napoli">Napoli</option>
+                            <option value="RB Leipzig">RB Leipzig</option>
+                            <option value="Porto">Porto</option>
+                            <option value="Juventus">Juventus</option>
+                            <option value="Chelsea">Chelsea</option>
+                            <option value="Ajax">Ajax</option>
+                            <option value="Celtic">Celtic</option>
+                            <option value="Shakhtar Donetsk">Shakhtar Donetsk</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <p class="form-error" id="team-error" role="alert">Please select your favorite team.</p>
+                    </div>
+
+                    <!-- Competition -->
+                    <fieldset class="form-group">
+                        <legend class="form-label">Preferred Competition</legend>
+                        <div class="form-radio-group">
+                            <label class="form-check">
+                                <input type="radio" name="competition" value="Champions League" checked>
+                                UEFA Champions League
+                            </label>
+                            <label class="form-check">
+                                <input type="radio" name="competition" value="Europa League">
+                                UEFA Europa League
+                            </label>
+                            <label class="form-check">
+                                <input type="radio" name="competition" value="All European">
+                                All European Competitions
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Notifications -->
+                    <fieldset class="form-group">
+                        <legend class="form-label">Email Notifications</legend>
+                        <div class="form-checkbox-group">
+                            <label class="form-check">
+                                <input type="checkbox" name="notif_preview" value="yes" checked>
+                                Match Previews (day before kick-off)
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" name="notif_results" value="yes" checked>
+                                Match Results &amp; Reports
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" name="notif_stats" value="yes">
+                                Weekly Statistics Digest
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" name="notif_transfer" value="yes">
+                                Transfer News &amp; Rumours
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message (Optional)</label>
+                        <textarea class="form-textarea" id="message" name="message"
+                            placeholder="Any teams, competitions, or topics you'd like us to cover…" maxlength="400"
+                            rows="4"></textarea>
+                        <p class="form-hint">Maximum 400 characters.</p>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-actions">
+                        <button type="reset" class="btn-reset">Clear Form</button>
+                        <button type="submit" class="btn-submit">Subscribe Now →</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="EuroStats Home">
+                    <img src="favicon.svg" alt="" width="32" height="32" aria-hidden="true">
+                    <div class="logo-text">
+                        <span class="logo-name">EuroStats</span>
+                        <span class="logo-tagline">Football Analytics</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Data-driven European football analytics and Champions League insights.</p>
+            </div>
+
+            <nav aria-label="Quick links">
+                <p class="footer-heading">Quick Links</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html">Match Analysis</a></li>
+                    <li><a href="form.html">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-label="Legal and extras">
+                <p class="footer-heading">Info</p>
+                <ul class="footer-links">
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+                            rel="noopener noreferrer">▶ Demo Video</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 EuroStats. Created by Thomas Sosa Lijeron.</p>
+            <div class="footer-bottom-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Demo
+                    Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('main-nav');
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = mainNav.classList.toggle('open');
+                hamburger.classList.toggle('active', isOpen);
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+
+        // Client-side form validation before submission
+        const form = document.getElementById('subscription-form');
+        form.addEventListener('submit', (e) => {
+            let valid = true;
+
+            const fields = [
+                { id: 'fname', errorId: 'fname-error', check: v => v.trim().length >= 2 },
+                { id: 'lname', errorId: 'lname-error', check: v => v.trim().length >= 2 },
+                { id: 'email', errorId: 'email-error', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+                { id: 'team', errorId: 'team-error', check: v => v !== '' }
+            ];
+
+            fields.forEach(({ id, errorId, check }) => {
+                const input = document.getElementById(id);
+                const error = document.getElementById(errorId);
+                if (!check(input.value)) {
+                    valid = false;
+                    error.classList.add('visible');
+                    input.setAttribute('aria-invalid', 'true');
+                } else {
+                    error.classList.remove('visible');
+                    input.removeAttribute('aria-invalid');
+                }
+            });
+
+            if (!valid) {
+                e.preventDefault();
+                // Focus first invalid field
+                const firstInvalid = form.querySelector('[aria-invalid="true"]');
+                firstInvalid?.focus();
+            }
+        });
+
+        // Clear errors on input
+        ['fname', 'lname', 'email', 'team'].forEach(id => {
+            const el = document.getElementById(id);
+            el?.addEventListener('input', () => {
+                document.getElementById(id + '-error')?.classList.remove('visible');
+                el.removeAttribute('aria-invalid');
+            });
+        });
+    </script>
+</body>
+
+</html>

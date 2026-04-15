@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EuroStats newsletter subscription confirmation. Review your submitted details.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+    <title>Subscription Confirmed – EuroStats</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="EuroStats Home">
+                <img src="favicon.svg" alt="" width="38" height="38" loading="lazy" aria-hidden="true">
+                <div class="logo-text">
+                    <span class="logo-name">EuroStats</span>
+                    <span class="logo-tagline">Football Analytics</span>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding-top:2rem;padding-bottom:2rem;">
+            <div class="action-card">
+                <div style="font-size:3rem;margin-bottom:0.75rem;text-align:center" aria-hidden="true">✅</div>
+                <h2>You're Subscribed!</h2>
+                <p style="color:var(--light-text);font-size:0.9rem;margin-bottom:0">
+                    Thanks for registering with EuroStats. Here's a summary of what you submitted:
+                </p>
+
+                <div class="submitted-data" id="submitted-data" aria-label="Submitted form data">
+                    <!-- Populated by JavaScript below -->
+                    <p class="no-results">No submission data found. <a href="form.html">Go back to the form</a>.</p>
+                </div>
+
+                <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    <a href="form.html" class="btn btn-outline"
+                        style="color:var(--primary);border-color:var(--border)">Edit Registration</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="EuroStats Home">
+                    <img src="favicon.svg" alt="" width="32" height="32" aria-hidden="true">
+                    <div class="logo-text">
+                        <span class="logo-name">EuroStats</span>
+                        <span class="logo-tagline">Football Analytics</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Data-driven European football analytics and Champions League insights.</p>
+            </div>
+
+            <nav aria-label="Quick links">
+                <p class="footer-heading">Quick Links</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html">Match Analysis</a></li>
+                    <li><a href="form.html">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-label="Info links">
+                <p class="footer-heading">Info</p>
+                <ul class="footer-links">
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+                            rel="noopener noreferrer">▶ Demo Video</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 EuroStats. Created by Thomas Sosa Lijeron.</p>
+            <div class="footer-bottom-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Demo
+                    Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('main-nav');
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = mainNav.classList.toggle('open');
+                hamburger.classList.toggle('active', isOpen);
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+
+        // Read URL query params and display submitted data
+        const params = new URLSearchParams(window.location.search);
+        const container = document.getElementById('submitted-data');
+
+        // Only show if we got data
+        if (params.toString() !== '') {
+            const labelMap = {
+                fname: 'First Name',
+                lname: 'Last Name',
+                email: 'Email Address',
+                team: 'Favorite Team',
+                competition: 'Preferred Competition',
+                notif_preview: 'Match Previews',
+                notif_results: 'Match Results',
+                notif_stats: 'Statistics Digest',
+                notif_transfer: 'Transfer News',
+                message: 'Message'
+            };
+
+            // Collect checkboxes as a group
+            const notifications = [];
+            if (params.get('notif_preview') === 'yes') notifications.push('Match Previews');
+            if (params.get('notif_results') === 'yes') notifications.push('Match Results');
+            if (params.get('notif_stats') === 'yes') notifications.push('Statistics Digest');
+            if (params.get('notif_transfer') === 'yes') notifications.push('Transfer News');
+
+            const displayFields = [
+                { key: 'fname', label: 'First Name' },
+                { key: 'lname', label: 'Last Name' },
+                { key: 'email', label: 'Email Address' },
+                { key: 'team', label: 'Favorite Team' },
+                { key: 'competition', label: 'Preferred Competition' }
+            ];
+
+            const rows = displayFields
+                .filter(f => params.get(f.key))
+                .map(f => `
+          <div class="data-row">
+            <span class="data-key">${f.label}</span>
+            <span class="data-val">${params.get(f.key)}</span>
+          </div>`)
+                .join('');
+
+            const notifRow = notifications.length > 0
+                ? `<div class="data-row">
+            <span class="data-key">Notifications</span>
+            <span class="data-val">${notifications.join(', ')}</span>
+           </div>`
+                : '';
+
+            const messageVal = params.get('message');
+            const messageRow = messageVal
+                ? `<div class="data-row">
+            <span class="data-key">Message</span>
+            <span class="data-val">${messageVal}</span>
+           </div>`
+                : '';
+
+            container.innerHTML = rows + notifRow + messageRow;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="In-depth UEFA Champions League match analysis. Win probabilities, head-to-head records, expected goals (xG), and data-driven forecasts for every fixture.">
+    <meta name="author" content="Thomas Sosa Lijeron">
+    <meta name="keywords"
+        content="match analysis, win probability, expected goals, xG, head to head, Champions League predictions">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Match Analysis &amp; Insights – EuroStats">
+    <meta property="og:description"
+        content="Data-driven Champions League match predictions, win probabilities, and head-to-head stats for every fixture.">
+    <meta property="og:url" content="https://thomassosa.github.io/wdd231/finalproject/analysis.html">
+    <meta property="og:image" content="https://thomassosa.github.io/wdd231/finalproject/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Match Analysis – EuroStats">
+    <meta name="twitter:description" content="Win probabilities, xG, and head-to-head analytics for UCL matches.">
+
+    <title>Match Analysis &amp; Insights – EuroStats</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="EuroStats Home">
+                <img src="favicon.svg" alt="" width="38" height="38" loading="lazy" aria-hidden="true">
+                <div class="logo-text">
+                    <span class="logo-name">EuroStats</span>
+                    <span class="logo-tagline">Football Analytics</span>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html" aria-current="page">Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ═══════════════════ PAGE HERO ════════════════════ -->
+        <div class="page-hero">
+            <div class="page-hero-inner">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span aria-hidden="true">›</span>
+                    <span aria-current="page">Match Analysis</span>
+                </nav>
+                <h1>Match <span>Analysis</span> &amp; Insights</h1>
+                <p>Data-driven forecasts — win probabilities, expected goals, and head-to-head records for every UCL
+                    fixture.</p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════ FEATURED FIXTURE ════════════════ -->
+        <section class="section section-alt" aria-labelledby="highlight-h2">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="highlight-h2">Next Big Fixture</h2>
+                </div>
+                <div id="highlight-container"
+                    style="background:var(--white);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);border:1px solid var(--border);">
+                    <!-- Dynamically populated by analysis.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ HOW IT WORKS ════════════════════ -->
+        <section class="section" aria-labelledby="method-h2">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="method-h2">How Our Analysis Works</h2>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;">
+                    <div
+                        style="background:var(--bg-light);border-radius:var(--radius);padding:1.25rem;text-align:center;">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">📈</div>
+                        <h3 style="font-size:0.95rem;color:var(--primary);margin-bottom:0.4rem">Win Probability</h3>
+                        <p style="font-size:0.8rem;color:var(--light-text);margin:0">Derived from attack/defense
+                            ratings, home advantage, and historical performance.</p>
+                    </div>
+                    <div
+                        style="background:var(--bg-light);border-radius:var(--radius);padding:1.25rem;text-align:center;">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">⚽</div>
+                        <h3 style="font-size:0.95rem;color:var(--primary);margin-bottom:0.4rem">Expected Goals (xG)</h3>
+                        <p style="font-size:0.8rem;color:var(--light-text);margin:0">Statistical prediction of how many
+                            goals each team is expected to score based on shot quality.</p>
+                    </div>
+                    <div
+                        style="background:var(--bg-light);border-radius:var(--radius);padding:1.25rem;text-align:center;">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">🔄</div>
+                        <h3 style="font-size:0.95rem;color:var(--primary);margin-bottom:0.4rem">Head-to-Head</h3>
+                        <p style="font-size:0.8rem;color:var(--light-text);margin:0">Complete historical record between
+                            two clubs including recent meetings and goal tallies.</p>
+                    </div>
+                    <div
+                        style="background:var(--bg-light);border-radius:var(--radius);padding:1.25rem;text-align:center;">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">🛡️</div>
+                        <h3 style="font-size:0.95rem;color:var(--primary);margin-bottom:0.4rem">Team Ratings</h3>
+                        <p style="font-size:0.8rem;color:var(--light-text);margin:0">Attack and defense strength scores
+                            (1–10) based on season performance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ ALL MATCHES ════════════════════ -->
+        <section class="section section-alt" aria-labelledby="all-matches-h2">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="all-matches-h2">All Fixtures</h2>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-bar" role="group" aria-label="Filter matches">
+                    <span class="filter-label">Show:</span>
+                    <button class="filter-btn active analysis-filter-btn" data-filter="all"
+                        aria-pressed="true">All</button>
+                    <button class="filter-btn analysis-filter-btn" data-filter="upcoming"
+                        aria-pressed="false">Upcoming</button>
+                    <button class="filter-btn analysis-filter-btn" data-filter="finished"
+                        aria-pressed="false">Results</button>
+                    <button class="filter-btn analysis-filter-btn" data-filter="high" aria-pressed="false">Key
+                        Matches</button>
+                </div>
+
+                <div id="analysis-container">
+                    <!-- Dynamically populated by analysis.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="EuroStats Home">
+                    <img src="favicon.svg" alt="" width="32" height="32" aria-hidden="true">
+                    <div class="logo-text">
+                        <span class="logo-name">EuroStats</span>
+                        <span class="logo-tagline">Football Analytics</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Data-driven European football analytics and Champions League insights.</p>
+            </div>
+
+            <nav aria-label="Quick links">
+                <p class="footer-heading">Quick Links</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Standings</a></li>
+                    <li><a href="analysis.html">Match Analysis</a></li>
+                    <li><a href="form.html">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-label="Legal and extras">
+                <p class="footer-heading">Info</p>
+                <ul class="footer-links">
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+                            rel="noopener noreferrer">▶ Demo Video</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 EuroStats. Created by Thomas Sosa Lijeron.</p>
+            <div class="footer-bottom-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Demo
+                    Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════ MODAL ═══════════════════════ -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        aria-hidden="true">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <button class="modal-close" id="modal-close" aria-label="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/analysis.js"></script>
+</body>
+
+</html>
