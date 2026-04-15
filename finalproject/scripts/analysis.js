@@ -2,6 +2,8 @@ import { formatDate, buildTeamBadge, showLoading, showError } from './utils.js';
 import { isFavorite } from './storage.js';
 import { initModal, openModal } from './modal.js';
 
+console.log('analysis.js module loaded');
+
 const hamburger = document.getElementById('hamburger');
 const mainNav = document.getElementById('main-nav');
 if (hamburger && mainNav) {
@@ -13,6 +15,7 @@ if (hamburger && mainNav) {
 }
 
 let teamData = [];
+let allMatches = [];
 
 async function fetchJSON(url) {
     try {
@@ -25,6 +28,7 @@ async function fetchJSON(url) {
 }
 
 function renderAnalysisCards(matches, container, filter = 'all') {
+    console.log('renderAnalysisCards called with filter:', filter, 'matches:', matches.length);
     if (!matches || matches.length === 0) {
         container.innerHTML = '<p class="no-results">No matches to analyse.</p>';
         return;
@@ -119,16 +123,35 @@ function renderAnalysisCards(matches, container, filter = 'all') {
 
     container.innerHTML = html;
 
+    // Attach event listener directly to each button
     container.querySelectorAll('.open-h2h').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             const id = parseInt(btn.dataset.matchId, 10);
-            const match = matches.find(m => m.id === id);
-            if (match) openH2HModal(match);
+            console.log('[H2H Click] Button with ID:', id);
+            const match = allMatches.find(m => m.id === id);
+            if (match) {
+                console.log('[H2H Match Found]:', match.homeTeam, 'vs', match.awayTeam);
+                openH2HModal(match);
+            } else {
+                console.error('[H2H Error] Match not found!');
+            }
         });
     });
 }
 
 function openH2HModal(match) {
+    console.log('[openH2HModal] Called with match ID:', match?.id, match?.homeTeam);
+    if (!match) {
+        console.error('[openH2HModal] ERROR: No match data!');
+        return;
+    }
+    if (!match.headToHead) {
+        console.error('[openH2HModal] ERROR: Missing headToHead data!');
+        return;
+    }
+
     const h2h = match.headToHead;
     const total = h2h.homeWins + h2h.draws + h2h.awayWins;
     const homeWidth = total > 0 ? Math.round((h2h.homeWins / total) * 100) : 33;
@@ -138,10 +161,23 @@ function openH2HModal(match) {
     const homeTeam = teamData.find(t => t.id === match.homeTeamId);
     const awayTeam = teamData.find(t => t.id === match.awayTeamId);
 
-    const homeAttack = homeTeam ? homeTeam.attackStrength.toFixed(1) : 'N/A';
-    const awayAttack = awayTeam ? awayTeam.attackStrength.toFixed(1) : 'N/A';
-    const homeDefense = homeTeam ? homeTeam.defenseStrength.toFixed(1) : 'N/A';
-    const awayDefense = awayTeam ? awayTeam.defenseStrength.toFixed(1) : 'N/A';
+    // Calculate or use existing attack/defense strength
+    const calculateAttackStrength = (team) => {
+        if (team?.attackStrength !== undefined) return team.attackStrength;
+        if (team?.goalsFor && team?.played) return (team.goalsFor / team.played).toFixed(1);
+        return 'N/A';
+    };
+
+    const calculateDefenseStrength = (team) => {
+        if (team?.defenseStrength !== undefined) return team.defenseStrength;
+        if (team?.goalsAgainst && team?.played) return (3.5 - (team.goalsAgainst / team.played)).toFixed(1);
+        return 'N/A';
+    };
+
+    const homeAttack = calculateAttackStrength(homeTeam);
+    const awayAttack = calculateAttackStrength(awayTeam);
+    const homeDefense = calculateDefenseStrength(homeTeam);
+    const awayDefense = calculateDefenseStrength(awayTeam);
 
     const favLine = (teamId, name) => {
         if (!teamId) return '';
@@ -221,7 +257,9 @@ function openH2HModal(match) {
       </span>
     </div>`;
 
+    console.log('[openH2HModal] Calling openModal with title:', `${match.homeTeam} vs ${match.awayTeam} · Analysis`);
     openModal(`${match.homeTeam} vs ${match.awayTeam} · Analysis`, content);
+    console.log('[openH2HModal] Modal should be visible now');
 }
 
 function renderUpcomingHighlight(matches, container) {
@@ -280,9 +318,19 @@ function renderUpcomingHighlight(matches, container) {
       </button>
     </div>`;
 
-    container.querySelector('.open-h2h')?.addEventListener('click', () => {
-        openH2HModal(upcoming);
-    });
+    // Attach event listener to the highlighting button
+    const highlightBtn = container.querySelector('.open-h2h');
+    if (highlightBtn) {
+        highlightBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('[Highlight Click] Opening modal for match:', upcoming.id);
+            openH2HModal(upcoming);
+        });
+        console.log('[Highlight Ready] Button listener attached for match:', upcoming?.id);
+    } else {
+        console.error('[Highlight Error] Button not found!');
+    }
 }
 
 async function init() {
@@ -291,7 +339,6 @@ async function init() {
     const analysisContainer = document.getElementById('analysis-container');
     const highlightContainer = document.getElementById('highlight-container');
     const filterBtns = document.querySelectorAll('.analysis-filter-btn');
-    let allMatches = [];
 
     if (analysisContainer) showLoading(analysisContainer);
 
@@ -303,6 +350,9 @@ async function init() {
 
         allMatches = matches;
         teamData = teams;
+        console.log('Data loaded:', { matchCount: allMatches.length, teamCount: teamData.length });
+        console.log('Sample match:', allMatches[0]);
+        console.log('Sample team:', teamData[0]);
 
         if (highlightContainer) {
             renderUpcomingHighlight(allMatches, highlightContainer);
@@ -331,4 +381,7 @@ async function init() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded fired, calling init()');
+    init();
+});

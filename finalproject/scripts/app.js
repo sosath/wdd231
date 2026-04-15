@@ -12,6 +12,9 @@ if (hamburger && mainNav) {
     });
 }
 
+let allMatches = [];
+let allTeams = [];
+
 async function fetchJSON(url) {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -30,7 +33,7 @@ function renderMatches(matches, container) {
             : `<div class="match-score"><span class="match-score-upcoming">${match.time}</span></div>`;
 
         return `
-        <article class="match-card">
+        <article class="match-card" data-match-id="${match.id}">
           <div class="match-card-header">
             <span class="match-stage">${match.stage} · ${match.leg}</span>
             <span class="match-status">${isFinished ? 'Full Time' : 'Upcoming'}</span>
@@ -52,7 +55,7 @@ function renderMatches(matches, container) {
 
     container.querySelectorAll('.match-card').forEach(card => {
         card.addEventListener('click', () => {
-            const match = matches.find(m => m.id === parseInt(card.dataset.matchId));
+            const match = allMatches.find(m => m.id === parseInt(card.dataset.matchId));
             if (match) openMatchModal(match);
         });
     });
@@ -141,6 +144,9 @@ async function init() {
             fetchJSON('data/teams.json'),
             fetchJSON('data/matches.json')
         ]);
+
+        allTeams = teams;
+        allMatches = matches;
 
         if (matchesContainer) {
             renderMatches(matches, matchesContainer);

@@ -1,22 +1,602 @@
 ﻿[
-  {"id": 1, "name": "Real Madrid", "abbr": "RMA", "country": "Spain", "flag": "ES", "color": "#FFFFFF", "textColor": "#000000", "played": 8, "won": 6, "drawn": 1, "lost": 1, "goalsFor": 18, "goalsAgainst": 6, "goalDifference": 12, "points": 19, "form": ["W","W","D","W","W"], "status": "knockout"},
-  {"id": 2, "name": "Manchester City", "abbr": "MCI", "country": "England", "flag": "GB", "color": "#6CABDA", "textColor": "#FFFFFF", "played": 8, "won": 5, "drawn": 2, "lost": 1, "goalsFor": 15, "goalsAgainst": 8, "goalDifference": 7, "points": 17, "form": ["W","D","W","W","D"], "status": "knockout"},
-  {"id": 3, "name": "Bayern Munich", "abbr": "BAY", "country": "Germany", "flag": "DE", "color": "#DC052D", "textColor": "#FFFFFF", "played": 8, "won": 5, "drawn": 1, "lost": 2, "goalsFor": 16, "goalsAgainst": 9, "goalDifference": 7, "points": 16, "form": ["W","W","L","W","W"], "status": "knockout"},
-  {"id": 4, "name": "Paris Saint-Germain", "abbr": "PSG", "country": "France", "flag": "FR", "color": "#004494", "textColor": "#FFFFFF", "played": 8, "won": 5, "drawn": 0, "lost": 3, "goalsFor": 14, "goalsAgainst": 11, "goalDifference": 3, "points": 15, "form": ["W","L","W","W","L"], "status": "knockout"},
-  {"id": 5, "name": "Barcelona", "abbr": "BAR", "country": "Spain", "flag": "ES", "color": "#004B96", "textColor": "#FFFFFF", "played": 8, "won": 4, "drawn": 3, "lost": 1, "goalsFor": 13, "goalsAgainst": 8, "goalDifference": 5, "points": 15, "form": ["D","W","W","D","L"], "status": "knockout"},
-  {"id": 6, "name": "Liverpool", "abbr": "LIV", "country": "England", "flag": "GB", "color": "#C8102E", "textColor": "#FFFFFF", "played": 8, "won": 4, "drawn": 2, "lost": 2, "goalsFor": 14, "goalsAgainst": 10, "goalDifference": 4, "points": 14, "form": ["W","L","W","D","W"], "status": "knockout"},
-  {"id": 7, "name": "Inter Milan", "abbr": "INT", "country": "Italy", "flag": "IT", "color": "#0066CC", "textColor": "#FFFFFF", "played": 8, "won": 4, "drawn": 2, "lost": 2, "goalsFor": 12, "goalsAgainst": 9, "goalDifference": 3, "points": 14, "form": ["W","D","L","W","W"], "status": "knockout"},
-  {"id": 8, "name": "Arsenal", "abbr": "ARS", "country": "England", "flag": "GB", "color": "#EF0107", "textColor": "#FFFFFF", "played": 8, "won": 4, "drawn": 1, "lost": 3, "goalsFor": 11, "goalsAgainst": 10, "goalDifference": 1, "points": 13, "form": ["W","L","W","L","W"], "status": "knockout"},
-  {"id": 9, "name": "Atletico Madrid", "abbr": "ATM", "country": "Spain", "flag": "ES", "color": "#DC052D", "textColor": "#FFFFFF", "played": 8, "won": 4, "drawn": 1, "lost": 3, "goalsFor": 10, "goalsAgainst": 9, "goalDifference": 1, "points": 13, "form": ["L","W","W","D","L"], "status": "knockout"},
-  {"id": 10, "name": "Borussia Dortmund", "abbr": "BVB", "country": "Germany", "flag": "DE", "color": "#FFD700", "textColor": "#000000", "played": 8, "won": 3, "drawn": 3, "lost": 2, "goalsFor": 13, "goalsAgainst": 12, "goalDifference": 1, "points": 12, "form": ["D","W","L","D","W"], "status": "knockout"},
-  {"id": 11, "name": "Benfica", "abbr": "BEN", "country": "Portugal", "flag": "PT", "color": "#DA372A", "textColor": "#FFFFFF", "played": 8, "won": 3, "drawn": 2, "lost": 3, "goalsFor": 10, "goalsAgainst": 11, "goalDifference": -1, "points": 11, "form": ["W","L","D","L","W"], "status": "group"},
-  {"id": 12, "name": "AC Milan", "abbr": "ACM", "country": "Italy", "flag": "IT", "color": "#E60446", "textColor": "#FFFFFF", "played": 8, "won": 3, "drawn": 2, "lost": 3, "goalsFor": 9, "goalsAgainst": 10, "goalDifference": -1, "points": 11, "form": ["D","L","W","W","L"], "status": "group"},
-  {"id": 13, "name": "Napoli", "abbr": "NAP", "country": "Italy", "flag": "IT", "color": "#1873CC", "textColor": "#FFFFFF", "played": 8, "won": 3, "drawn": 1, "lost": 4, "goalsFor": 11, "goalsAgainst": 13, "goalDifference": -2, "points": 10, "form": ["L","W","L","W","L"], "status": "group"},
-  {"id": 14, "name": "RB Leipzig", "abbr": "RBL", "country": "Germany", "flag": "DE", "color": "#FF0000", "textColor": "#FFFFFF", "played": 8, "won": 3, "drawn": 1, "lost": 4, "goalsFor": 9, "goalsAgainst": 12, "goalDifference": -3, "points": 10, "form": ["W","L","L","W","D"], "status": "group"},
-  {"id": 15, "name": "FC Porto", "abbr": "POR", "country": "Portugal", "flag": "PT", "color": "#003594", "textColor": "#FFFFFF", "played": 8, "won": 2, "drawn": 3, "lost": 3, "goalsFor": 9, "goalsAgainst": 11, "goalDifference": -2, "points": 9, "form": ["D","L","W","D","L"], "status": "group"},
-  {"id": 16, "name": "Juventus", "abbr": "JUV", "country": "Italy", "flag": "IT", "color": "#000000", "textColor": "#FFFFFF", "played": 8, "won": 2, "drawn": 3, "lost": 3, "goalsFor": 7, "goalsAgainst": 10, "goalDifference": -3, "points": 9, "form": ["D","D","L","W","L"], "status": "group"},
-  {"id": 17, "name": "Chelsea", "abbr": "CHE", "country": "England", "flag": "GB", "color": "#0052CC", "textColor": "#FFFFFF", "played": 8, "won": 2, "drawn": 2, "lost": 4, "goalsFor": 8, "goalsAgainst": 13, "goalDifference": -5, "points": 8, "form": ["L","W","L","D","W"], "status": "group"},
-  {"id": 18, "name": "Ajax", "abbr": "AJX", "country": "Netherlands", "flag": "NL", "color": "#EE163F", "textColor": "#FFFFFF", "played": 8, "won": 2, "drawn": 1, "lost": 5, "goalsFor": 7, "goalsAgainst": 14, "goalDifference": -7, "points": 7, "form": ["L","L","W","L","D"], "status": "eliminated"},
-  {"id": 19, "name": "Celtic", "abbr": "CEL", "country": "Scotland", "flag": "GB", "color": "#00AB83", "textColor": "#FFFFFF", "played": 8, "won": 1, "drawn": 2, "lost": 5, "goalsFor": 6, "goalsAgainst": 16, "goalDifference": -10, "points": 5, "form": ["L","D","L","W","L"], "status": "eliminated"},
-  {"id": 20, "name": "Shakhtar Donetsk", "abbr": "SHA", "country": "Ukraine", "flag": "UA", "color": "#FFB800", "textColor": "#000000", "played": 8, "won": 1, "drawn": 1, "lost": 6, "goalsFor": 5, "goalsAgainst": 18, "goalDifference": -13, "points": 4, "form": ["L","L","D","L","W"], "status": "eliminated"}
+    {
+        "id": 1,
+        "name": "Real Madrid",
+        "abbr": "RMA",
+        "country": "Spain",
+        "flag": "ES",
+        "color": "#FFFFFF",
+        "textColor": "#000000",
+        "played": 8,
+        "won": 6,
+        "drawn": 1,
+        "lost": 1,
+        "goalsFor": 18,
+        "goalsAgainst": 6,
+        "goalDifference": 12,
+        "points": 19,
+        "form": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Vinícius Jr.",
+            "goals": 5,
+            "assists": 2
+        }
+    },
+    {
+        "id": 2,
+        "name": "Manchester City",
+        "abbr": "MCI",
+        "country": "England",
+        "flag": "GB",
+        "color": "#6CABDA",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 5,
+        "drawn": 2,
+        "lost": 1,
+        "goalsFor": 15,
+        "goalsAgainst": 8,
+        "goalDifference": 7,
+        "points": 17,
+        "form": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "D"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Erling Haaland",
+            "goals": 5,
+            "assists": 1
+        }
+    },
+    {
+        "id": 3,
+        "name": "Bayern Munich",
+        "abbr": "BAY",
+        "country": "Germany",
+        "flag": "DE",
+        "color": "#DC052D",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 5,
+        "drawn": 1,
+        "lost": 2,
+        "goalsFor": 16,
+        "goalsAgainst": 9,
+        "goalDifference": 7,
+        "points": 16,
+        "form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Serge Gnabry",
+            "goals": 4,
+            "assists": 2
+        }
+    },
+    {
+        "id": 4,
+        "name": "Paris Saint-Germain",
+        "abbr": "PSG",
+        "country": "France",
+        "flag": "FR",
+        "color": "#004494",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 5,
+        "drawn": 0,
+        "lost": 3,
+        "goalsFor": 14,
+        "goalsAgainst": 11,
+        "goalDifference": 3,
+        "points": 15,
+        "form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Kylian Mbappé",
+            "goals": 4,
+            "assists": 3
+        }
+    },
+    {
+        "id": 5,
+        "name": "Barcelona",
+        "abbr": "BAR",
+        "country": "Spain",
+        "flag": "ES",
+        "color": "#004B96",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 4,
+        "drawn": 3,
+        "lost": 1,
+        "goalsFor": 13,
+        "goalsAgainst": 8,
+        "goalDifference": 5,
+        "points": 15,
+        "form": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Robert Lewandowski",
+            "goals": 4,
+            "assists": 1
+        }
+    },
+    {
+        "id": 6,
+        "name": "Liverpool",
+        "abbr": "LIV",
+        "country": "England",
+        "flag": "GB",
+        "color": "#C8102E",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 4,
+        "drawn": 2,
+        "lost": 2,
+        "goalsFor": 14,
+        "goalsAgainst": 10,
+        "goalDifference": 4,
+        "points": 14,
+        "form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Mohamed Salah",
+            "goals": 4,
+            "assists": 2
+        }
+    },
+    {
+        "id": 7,
+        "name": "Inter Milan",
+        "abbr": "INT",
+        "country": "Italy",
+        "flag": "IT",
+        "color": "#0066CC",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 4,
+        "drawn": 2,
+        "lost": 2,
+        "goalsFor": 12,
+        "goalsAgainst": 9,
+        "goalDifference": 3,
+        "points": 14,
+        "form": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Edin Dzeko",
+            "goals": 3,
+            "assists": 2
+        }
+    },
+    {
+        "id": 8,
+        "name": "Arsenal",
+        "abbr": "ARS",
+        "country": "England",
+        "flag": "GB",
+        "color": "#EF0107",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 4,
+        "drawn": 1,
+        "lost": 3,
+        "goalsFor": 11,
+        "goalsAgainst": 10,
+        "goalDifference": 1,
+        "points": 13,
+        "form": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Bukayo Saka",
+            "goals": 3,
+            "assists": 1
+        }
+    },
+    {
+        "id": 9,
+        "name": "Atletico Madrid",
+        "abbr": "ATM",
+        "country": "Spain",
+        "flag": "ES",
+        "color": "#DC052D",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 4,
+        "drawn": 1,
+        "lost": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 9,
+        "goalDifference": 1,
+        "points": 13,
+        "form": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "L"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Álvaro Morata",
+            "goals": 3,
+            "assists": 1
+        }
+    },
+    {
+        "id": 10,
+        "name": "Borussia Dortmund",
+        "abbr": "BVB",
+        "country": "Germany",
+        "flag": "DE",
+        "color": "#FFD700",
+        "textColor": "#000000",
+        "played": 8,
+        "won": 3,
+        "drawn": 3,
+        "lost": 2,
+        "goalsFor": 13,
+        "goalsAgainst": 12,
+        "goalDifference": 1,
+        "points": 12,
+        "form": [
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+        ],
+        "status": "knockout",
+        "topScorer": {
+            "name": "Marco Reus",
+            "goals": 3,
+            "assists": 2
+        }
+    },
+    {
+        "id": 11,
+        "name": "Benfica",
+        "abbr": "BEN",
+        "country": "Portugal",
+        "flag": "PT",
+        "color": "#DA372A",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 3,
+        "drawn": 2,
+        "lost": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 11,
+        "goalDifference": -1,
+        "points": 11,
+        "form": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "W"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "João Félix",
+            "goals": 3,
+            "assists": 2
+        }
+    },
+    {
+        "id": 12,
+        "name": "AC Milan",
+        "abbr": "ACM",
+        "country": "Italy",
+        "flag": "IT",
+        "color": "#E60446",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 3,
+        "drawn": 2,
+        "lost": 3,
+        "goalsFor": 9,
+        "goalsAgainst": 10,
+        "goalDifference": -1,
+        "points": 11,
+        "form": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "L"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Rafael Leão",
+            "goals": 2,
+            "assists": 2
+        }
+    },
+    {
+        "id": 13,
+        "name": "Napoli",
+        "abbr": "NAP",
+        "country": "Italy",
+        "flag": "IT",
+        "color": "#1873CC",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 3,
+        "drawn": 1,
+        "lost": 4,
+        "goalsFor": 11,
+        "goalsAgainst": 13,
+        "goalDifference": -2,
+        "points": 10,
+        "form": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Hirving Lozano",
+            "goals": 3,
+            "assists": 1
+        }
+    },
+    {
+        "id": 14,
+        "name": "RB Leipzig",
+        "abbr": "RBL",
+        "country": "Germany",
+        "flag": "DE",
+        "color": "#FF0000",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 3,
+        "drawn": 1,
+        "lost": 4,
+        "goalsFor": 9,
+        "goalsAgainst": 12,
+        "goalDifference": -3,
+        "points": 10,
+        "form": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Timo Werner",
+            "goals": 2,
+            "assists": 1
+        }
+    },
+    {
+        "id": 15,
+        "name": "FC Porto",
+        "abbr": "POR",
+        "country": "Portugal",
+        "flag": "PT",
+        "color": "#003594",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 2,
+        "drawn": 3,
+        "lost": 3,
+        "goalsFor": 9,
+        "goalsAgainst": 11,
+        "goalDifference": -2,
+        "points": 9,
+        "form": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "L"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Mehdi Taremi",
+            "goals": 2,
+            "assists": 1
+        }
+    },
+    {
+        "id": 16,
+        "name": "Juventus",
+        "abbr": "JUV",
+        "country": "Italy",
+        "flag": "IT",
+        "color": "#000000",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 2,
+        "drawn": 3,
+        "lost": 3,
+        "goalsFor": 7,
+        "goalsAgainst": 10,
+        "goalDifference": -3,
+        "points": 9,
+        "form": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Dusan Vlahović",
+            "goals": 2,
+            "assists": 1
+        }
+    },
+    {
+        "id": 17,
+        "name": "Chelsea",
+        "abbr": "CHE",
+        "country": "England",
+        "flag": "GB",
+        "color": "#0052CC",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 2,
+        "drawn": 2,
+        "lost": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 13,
+        "goalDifference": -5,
+        "points": 8,
+        "form": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "W"
+        ],
+        "status": "group",
+        "topScorer": {
+            "name": "Nicolas Jackson",
+            "goals": 2,
+            "assists": 0
+        }
+    },
+    {
+        "id": 18,
+        "name": "Ajax",
+        "abbr": "AJX",
+        "country": "Netherlands",
+        "flag": "NL",
+        "color": "#EE163F",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 2,
+        "drawn": 1,
+        "lost": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 14,
+        "goalDifference": -7,
+        "points": 7,
+        "form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D"
+        ],
+        "status": "eliminated",
+        "topScorer": {
+            "name": "Sergiño Dest",
+            "goals": 2,
+            "assists": 1
+        }
+    },
+    {
+        "id": 19,
+        "name": "Celtic",
+        "abbr": "CEL",
+        "country": "Scotland",
+        "flag": "GB",
+        "color": "#00AB83",
+        "textColor": "#FFFFFF",
+        "played": 8,
+        "won": 1,
+        "drawn": 2,
+        "lost": 5,
+        "goalsFor": 6,
+        "goalsAgainst": 16,
+        "goalDifference": -10,
+        "points": 5,
+        "form": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "L"
+        ],
+        "status": "eliminated",
+        "topScorer": {
+            "name": "Kyogo Furuhashi",
+            "goals": 1,
+            "assists": 1
+        }
+    },
+    {
+        "id": 20,
+        "name": "Shakhtar Donetsk",
+        "abbr": "SHA",
+        "country": "Ukraine",
+        "flag": "UA",
+        "color": "#FFB800",
+        "textColor": "#000000",
+        "played": 8,
+        "won": 1,
+        "drawn": 1,
+        "lost": 6,
+        "goalsFor": 5,
+        "goalsAgainst": 18,
+        "goalDifference": -13,
+        "points": 4,
+        "form": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "W"
+        ],
+        "status": "eliminated",
+        "topScorer": {
+            "name": "Bogdan Mykhaylichenko",
+            "goals": 1,
+            "assists": 0
+        }
+    }
 ]
