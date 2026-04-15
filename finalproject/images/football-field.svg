@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      .field { fill: #1a7d3a; }
+      .line { stroke: rgba(255,255,255,0.15); stroke-width: 2; fill: none; }
+      .thick-line { stroke: rgba(255,255,255,0.25); stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Field Background -->
+  <rect class="field" width="1200" height="600"/>
+  
+  <!-- Grass pattern (subtle lines) -->
+  <line x1="0" y1="0" x2="1200" y2="600" class="line" opacity="0.1"/>
+  <line x1="1200" y1="0" x2="0" y2="600" class="line" opacity="0.1"/>
+  
+  <!-- Field Border -->
+  <rect x="50" y="50" width="1100" height="500" class="thick-line"/>
+  
+  <!-- Center Line -->
+  <line x1="600" y1="50" x2="600" y2="550" class="thick-line"/>
+  
+  <!-- Center Circle -->
+  <circle cx="600" cy="300" r="80" class="thick-line"/>
+  
+  <!-- Center Spot -->
+  <circle cx="600" cy="300" r="4" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Left Goal Area -->
+  <rect x="50" y="175" width="100" height="250" class="line"/>
+  
+  <!-- Left Penalty Area -->
+  <rect x="50" y="100" width="150" height="400" class="line"/>
+  
+  <!-- Left Goal -->
+  <rect x="50" y="220" width="40" height="160" class="line"/>
+  
+  <!-- Left Penalty Mark -->
+  <circle cx="150" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Right Goal Area -->
+  <rect x="1050" y="175" width="100" height="250" class="line"/>
+  
+  <!-- Right Penalty Area -->
+  <rect x="1000" y="100" width="150" height="400" class="line"/>
+  
+  <!-- Right Goal -->
+  <rect x="1110" y="220" width="40" height="160" class="line"/>
+  
+  <!-- Right Penalty Mark -->
+  <circle cx="1050" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Corner Arcs - Left Top -->
+  <path d="M 50 100 Q 95 50 150 50" class="line"/>
+  
+  <!-- Corner Arcs - Left Bottom -->
+  <path d="M 50 500 Q 95 550 150 550" class="line"/>
+  
+  <!-- Corner Arcs - Right Top -->
+  <path d="M 1150 50 Q 1105 50 1050 100" class="line"/>
+  
+  <!-- Corner Arcs - Right Bottom -->
+  <path d="M 1050 500 Q 1105 550 1150 550" class="line"/>
+  
+  <!-- Decorative soccer balls -->
+  <g opacity="0.08">
+    <circle cx="150" cy="150" r="25" fill="white"/>
+    <circle cx="150" cy="150" r="20" fill="#1a7d3a"/>
+    <circle cx="140" cy="145" r="2" fill="white"/>
+    <circle cx="160" cy="145" r="2" fill="white"/>
+    <circle cx="145" cy="160" r="2" fill="white"/>
+    <circle cx="155" cy="160" r="2" fill="white"/>
+  </g>
+  
+  <g opacity="0.08">
+    <circle cx="1050" cy="450" r="25" fill="white"/>
+    <circle cx="1050" cy="450" r="20" fill="#1a7d3a"/>
+    <circle cx="1040" cy="445" r="2" fill="white"/>
+    <circle cx="1060" cy="445" r="2" fill="white"/>
+    <circle cx="1045" cy="460" r="2" fill="white"/>
+    <circle cx="1055" cy="460" r="2" fill="white"/>
+  </g>
+</svg>
