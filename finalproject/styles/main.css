@@ -1336,7 +1336,7 @@ p {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -1606,11 +1606,6 @@ p {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-}
-
-.btn-outline {
-    color: var(--primary);
-    border-color: var(--border);
 }
 
 .container-padded {
