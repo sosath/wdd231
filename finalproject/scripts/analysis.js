@@ -1,9 +1,7 @@
-// Match Analysis & Insights page
 import { formatDate, buildTeamBadge, showLoading, showError } from './utils.js';
 import { isFavorite } from './storage.js';
 import { initModal, openModal } from './modal.js';
 
-// Hamburger
 const hamburger = document.getElementById('hamburger');
 const mainNav = document.getElementById('main-nav');
 if (hamburger && mainNav) {
@@ -26,9 +24,6 @@ async function fetchJSON(url) {
     }
 }
 
-/**
- * Renders analysis cards for each match with probability bars and xG data.
- */
 function renderAnalysisCards(matches, container, filter = 'all') {
     if (!matches || matches.length === 0) {
         container.innerHTML = '<p class="no-results">No matches to analyse.</p>';
@@ -124,7 +119,6 @@ function renderAnalysisCards(matches, container, filter = 'all') {
 
     container.innerHTML = html;
 
-    // Attach H2H modal buttons
     container.querySelectorAll('.open-h2h').forEach(btn => {
         btn.addEventListener('click', () => {
             const id = parseInt(btn.dataset.matchId, 10);
@@ -133,8 +127,6 @@ function renderAnalysisCards(matches, container, filter = 'all') {
         });
     });
 }
-
-// ── H2H Modal ─────────────────────────────────────────────
 
 function openH2HModal(match) {
     const h2h = match.headToHead;
@@ -232,8 +224,6 @@ function openH2HModal(match) {
     openModal(`${match.homeTeam} vs ${match.awayTeam} · Analysis`, content);
 }
 
-// ── Upcoming Highlights ───────────────────────────────────
-
 function renderUpcomingHighlight(matches, container) {
     const upcoming = matches
         .filter(m => m.status === 'upcoming' && m.importance === 'high')
@@ -295,8 +285,6 @@ function renderUpcomingHighlight(matches, container) {
     });
 }
 
-// ── Init ─────────────────────────────────────────────────
-
 async function init() {
     initModal();
 
@@ -324,7 +312,6 @@ async function init() {
             renderAnalysisCards(allMatches, analysisContainer, 'all');
         }
 
-        // Filter buttons
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {

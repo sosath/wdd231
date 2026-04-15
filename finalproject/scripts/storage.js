@@ -1,5 +1,3 @@
-// localStorage management for favorites and preferences
-
 const FAVORITES_KEY = 'eurostats_favorites';
 const PREFS_KEY = 'eurostats_prefs';
 

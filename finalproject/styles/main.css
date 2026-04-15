@@ -1,5 +1,3 @@
-/* EuroStats - Main Stylesheet */
-
 :root {
     --primary: #2C3E50;
     --primary-dark: #1a252f;
@@ -28,14 +26,11 @@
     --transition: all 0.3s ease;
 }
 
-/* Base & Reset */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
-html {}
 
 body {
     font-family: var(--font-body);
@@ -68,7 +63,6 @@ ul {
     margin: 0;
 }
 
-/* Typography */
 h1,
 h2,
 h3,
@@ -101,7 +95,6 @@ p {
     margin: 0 0 1em;
 }
 
-/* Accessibility */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -119,8 +112,6 @@ p {
     outline-offset: 3px;
     border-radius: var(--radius-sm);
 }
-
-/* Header & Navigation */
 
 .site-header {
     background-color: var(--primary);
@@ -296,8 +287,6 @@ p {
     }
 }
 
-/* HERO SECTION */
-
 .hero {
     background: var(--primary);
     color: var(--white);
@@ -426,8 +415,6 @@ p {
     content: '★';
 }
 
-/* Layout Utilities */
-
 .container {
     max-width: var(--max-w);
     margin: 0 auto;
@@ -477,8 +464,6 @@ p {
     white-space: nowrap;
 }
 
-/* Stats Counter Bar */
-
 .stats-bar {
     background: var(--primary-dark);
     padding: 1.2rem 1.25rem;
@@ -511,8 +496,6 @@ p {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
 }
-
-/* Matches Grid */
 
 .matches-grid {
     display: grid;
@@ -675,8 +658,6 @@ p {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-/* Standings Table */
 
 .table-wrapper {
     overflow-x: auto;
@@ -843,8 +824,6 @@ p {
     border-radius: 50%;
 }
 
-/* Filter Bar */
-
 .filter-bar {
     display: flex;
     gap: 0.5rem;
@@ -893,8 +872,6 @@ p {
     outline: 2px solid var(--gold);
     outline-offset: 2px;
 }
-
-/* Top Scorers */
 
 .scorers-grid {
     display: grid;
@@ -983,7 +960,6 @@ p {
     text-transform: uppercase;
 }
 
-/* Analysis - Probability Bars */
 
 .analysis-card {
     background: var(--white);
@@ -992,8 +968,6 @@ p {
     overflow: hidden;
     margin-bottom: 1.25rem;
 }
-
-.analysis-card:hover {}
 
 .analysis-card-header {
     background: var(--primary);
@@ -1138,8 +1112,6 @@ p {
     background: var(--bg-light);
 }
 
-/* Mini Standings Widget */
-
 .mini-standings {
     background: var(--white);
     border-radius: var(--radius);
@@ -1201,8 +1173,6 @@ p {
     color: var(--light-text);
 }
 
-/* CTA SECTION (Follow a Team) */
-
 .cta-section {
     background: var(--primary-dark);
     padding: 3.5rem 1.25rem;
@@ -1220,8 +1190,6 @@ p {
     max-width: 480px;
     margin: 0 auto 2rem;
 }
-
-/* Form Styles */
 
 .form-section {
     max-width: 680px;
@@ -1365,8 +1333,6 @@ p {
     color: var(--dark-text);
 }
 
-/* Modal */
-
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -1499,8 +1465,6 @@ p {
     font-weight: 600;
 }
 
-/* Footer */
-
 .site-footer {
     background: var(--primary-dark);
     color: rgba(255, 255, 255, 0.7);
@@ -1598,8 +1562,6 @@ p {
     color: var(--gold);
 }
 
-/* PAGE HERO (Inner Pages) */
-
 .page-hero {
     background: var(--primary);
     padding: 2.5rem 1.25rem;
@@ -1645,8 +1607,6 @@ p {
     margin: 0 0.4rem;
 }
 
-/* Attributions Page */
-
 .attr-section {
     max-width: 800px;
     margin: 0 auto;
@@ -1671,8 +1631,6 @@ p {
 .attr-list a {
     color: var(--primary);
 }
-
-/* Loading & Error States */
 
 .loading-spinner {
     display: flex;
@@ -1764,8 +1722,6 @@ p {
 .data-val {
     color: var(--dark-text);
 }
-
-/* Responsive */
 
 @media (max-width: 480px) {
     .hero {

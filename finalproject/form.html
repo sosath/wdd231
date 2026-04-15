@@ -8,7 +8,6 @@
         content="Subscribe to the EuroStats newsletter and follow your favorite Champions League teams for match previews and statistical updates.">
     <meta name="author" content="Thomas Sosa Lijeron">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Newsletter &amp; Team Tracker – EuroStats">
     <meta property="og:description"
@@ -29,7 +28,6 @@
 
 <body>
 
-    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo" aria-label="EuroStats Home">
@@ -58,7 +56,6 @@
     </header>
 
     <main>
-        <!-- ═══════════════════ PAGE HERO ════════════════════ -->
         <div class="page-hero">
             <div class="page-hero-inner">
                 <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -71,7 +68,6 @@
             </div>
         </div>
 
-        <!-- ═══════════════════ FORM SECTION ════════════════ -->
         <div class="form-section">
             <div class="form-card">
                 <h2 style="color:var(--primary);margin-bottom:0.4rem">Fan Registration</h2>
@@ -80,10 +76,6 @@
                         aria-hidden="true">*</span> <span class="sr-only">asterisk</span> are required.
                 </p>
 
-                <!--
-          The form uses GET so that form-action.html can read
-          the submitted data from the URL query string.
-        -->
                 <form id="subscription-form" action="form-action.html" method="GET" novalidate
                     aria-label="Newsletter subscription form">
 
@@ -107,7 +99,6 @@
                         <p class="form-error" id="lname-error" role="alert">Please enter your last name.</p>
                     </div>
 
-                    <!-- Email -->
                     <div class="form-group">
                         <label class="form-label" for="email">
                             Email Address <span class="required" aria-hidden="true">*</span>
@@ -117,7 +108,6 @@
                         <p class="form-error" id="email-error" role="alert">Please enter a valid email address.</p>
                     </div>
 
-                    <!-- Favorite Team -->
                     <div class="form-group">
                         <label class="form-label" for="team">
                             Favorite Team <span class="required" aria-hidden="true">*</span>
@@ -149,7 +139,6 @@
                         <p class="form-error" id="team-error" role="alert">Please select your favorite team.</p>
                     </div>
 
-                    <!-- Competition -->
                     <fieldset class="form-group">
                         <legend class="form-label">Preferred Competition</legend>
                         <div class="form-radio-group">
@@ -168,7 +157,6 @@
                         </div>
                     </fieldset>
 
-                    <!-- Notifications -->
                     <fieldset class="form-group">
                         <legend class="form-label">Email Notifications</legend>
                         <div class="form-checkbox-group">
@@ -191,7 +179,6 @@
                         </div>
                     </fieldset>
 
-                    <!-- Message -->
                     <div class="form-group">
                         <label class="form-label" for="message">Message (Optional)</label>
                         <textarea class="form-textarea" id="message" name="message"
@@ -210,7 +197,6 @@
         </div>
     </main>
 
-    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -256,7 +242,6 @@
     </footer>
 
     <script>
-        // Hamburger toggle
         const hamburger = document.getElementById('hamburger');
         const mainNav = document.getElementById('main-nav');
         if (hamburger && mainNav) {
@@ -267,7 +252,6 @@
             });
         }
 
-        // Client-side form validation before submission
         const form = document.getElementById('subscription-form');
         form.addEventListener('submit', (e) => {
             let valid = true;
@@ -294,13 +278,11 @@
 
             if (!valid) {
                 e.preventDefault();
-                // Focus first invalid field
                 const firstInvalid = form.querySelector('[aria-invalid="true"]');
                 firstInvalid?.focus();
             }
         });
 
-        // Clear errors on input
         ['fname', 'lname', 'email', 'team'].forEach(id => {
             const el = document.getElementById(id);
             el?.addEventListener('input', () => {

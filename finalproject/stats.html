@@ -9,7 +9,6 @@
     <meta name="author" content="Thomas Sosa Lijeron">
     <meta name="keywords" content="Champions League standings, league table, top scorers, team stats, Europa League">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Standings & Stats – EuroStats">
     <meta property="og:description"
@@ -32,7 +31,6 @@
 
 <body>
 
-    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo" aria-label="EuroStats Home">
@@ -61,7 +59,6 @@
     </header>
 
     <main>
-        <!-- ═══════════════════ PAGE HERO ════════════════════ -->
         <div class="page-hero">
             <div class="page-hero-inner">
                 <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -74,7 +71,6 @@
             </div>
         </div>
 
-        <!-- ═══════════════════ STANDINGS TABLE ════════════════ -->
         <section class="section" aria-labelledby="standings-h2">
             <div class="container">
                 <div class="section-header">
@@ -83,7 +79,6 @@
                         view team details</span>
                 </div>
 
-                <!-- Filters -->
                 <div class="filter-bar" role="search" aria-label="Filter standings">
                     <label for="filter-search" class="sr-only">Search teams</label>
                     <input type="search" id="filter-search" class="form-input" placeholder="Search team…"
@@ -103,7 +98,6 @@
                     </select>
                 </div>
 
-                <!-- Table -->
                 <div class="table-wrapper" role="region" aria-label="Champions League standings table" tabindex="0">
                     <table class="standings-table" id="standings-table">
                         <caption class="sr-only">UEFA Champions League 2025/26 Standings</caption>
@@ -124,7 +118,6 @@
                             </tr>
                         </thead>
                         <tbody id="standings-body">
-                            <!-- Dynamically populated by stats.js -->
                         </tbody>
                     </table>
                 </div>
@@ -150,7 +143,6 @@
             </div>
         </section>
 
-        <!-- ═══════════════════ TOP SCORERS ════════════════════ -->
         <section class="section section-alt" aria-labelledby="scorers-h2">
             <div class="container">
                 <div class="section-header">
@@ -159,12 +151,10 @@
                         goalscorer per club</span>
                 </div>
                 <div id="scorers-container" class="scorers-grid">
-                    <!-- Dynamically populated by stats.js -->
                 </div>
             </div>
         </section>
 
-        <!-- ═════════════════ PERFORMANCE METRICS ═══════════════ -->
         <section class="section" aria-labelledby="metrics-h2">
             <div class="container">
                 <div class="section-header">
@@ -197,7 +187,6 @@
         </section>
     </main>
 
-    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -242,7 +231,6 @@
         </div>
     </footer>
 
-    <!-- ═══════════════════════ MODAL ═══════════════════════ -->
     <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
         aria-hidden="true">
         <div class="modal-container">

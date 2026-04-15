@@ -1,5 +1,3 @@
-// Modal dialog
-
 const overlay = document.getElementById('modal-overlay');
 const titleEl = document.getElementById('modal-title');
 const bodyEl = document.getElementById('modal-body');

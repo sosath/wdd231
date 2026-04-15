@@ -1,9 +1,7 @@
-// Statistics & Standings page
 import { buildTeamBadge, buildFormBadge, getPosClass, showLoading, showError } from './utils.js';
 import { getFavorites, toggleFavorite, isFavorite, savePreferences, getPreferences } from './storage.js';
 import { initModal, openModal } from './modal.js';
 
-// Hamburger
 const hamburger = document.getElementById('hamburger');
 const mainNav = document.getElementById('main-nav');
 if (hamburger && mainNav) {
@@ -31,7 +29,6 @@ function renderStandings(teams, tbody) {
         return;
     }
 
-    // Sort by points, then GD, then GF
     const sorted = [...teams].sort((a, b) => {
         if (b.points !== a.points) return b.points - a.points;
         if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
@@ -78,7 +75,6 @@ function renderStandings(teams, tbody) {
       </tr>`;
     }).join('');
 
-    // Attach favorite toggle events
     tbody.querySelectorAll('.btn-fav').forEach(btn => {
         btn.addEventListener('click', () => {
             const id = parseInt(btn.dataset.teamId, 10);
@@ -171,10 +167,8 @@ function openTeamModal(team, position) {
     openModal(team.name, content);
 }
 
-// ── Top Scorers ────────────────────────────────────────────
 
 function renderTopScorers(teams, container) {
-    // Extract top scorer from each team, sort by goals
     const scorers = teams
         .map(t => ({ ...t.topScorer, team: t.name, flag: t.flag, color: t.color, textColor: t.textColor, abbr: t.abbr }))
         .sort((a, b) => b.goals - a.goals)
@@ -197,8 +191,6 @@ function renderTopScorers(teams, container) {
     </div>`).join('');
 }
 
-// ── Filters ────────────────────────────────────────────────
-
 function applyFilters(country, sortBy, tbody) {
     let filtered = [...allTeams];
 
@@ -213,7 +205,6 @@ function applyFilters(country, sortBy, tbody) {
     } else if (sortBy === 'defense') {
         filtered.sort((a, b) => b.defenseStrength - a.defenseStrength);
     } else {
-        // Default: sort by points
         filtered.sort((a, b) => {
             if (b.points !== a.points) return b.points - a.points;
             return b.goalDifference - a.goalDifference;
@@ -241,7 +232,6 @@ async function init() {
     const filterSearch = document.getElementById('filter-search');
     let tableBody = document.querySelector('#standings-table tbody');
 
-    // Show a loading row in the tbody without destroying the table structure
     if (tableBody) {
         tableBody.innerHTML = `<tr><td colspan="12" style="padding:2rem;text-align:center;color:var(--light-text);font-family:var(--font-sub)"><div class="spinner" style="margin:0 auto 0.75rem"></div>Loading standings…</td></tr>`;
     }
@@ -250,20 +240,17 @@ async function init() {
     try {
         allTeams = await fetchJSON('data/teams.json');
 
-        // Populate country dropdown
         if (filterCountry) {
             const countries = buildCountryFilter(allTeams);
             filterCountry.innerHTML = `<option value="all">All Countries</option>` +
                 countries.map(c => `<option value="${c}">${c}</option>`).join('');
 
-            // Restore preference
             const prefs = getPreferences();
             if (prefs.filterCountry && prefs.filterCountry !== 'all') {
                 filterCountry.value = prefs.filterCountry;
             }
         }
 
-        // Re-query tbody in case DOM changed
         tableBody = document.querySelector('#standings-table tbody');
         if (tableBody) {
             renderStandings(allTeams, tableBody);
@@ -273,7 +260,6 @@ async function init() {
             renderTopScorers(allTeams, scorersContainer);
         }
 
-        // Filter change events
         const runFilters = () => {
             const country = filterCountry ? filterCountry.value : 'all';
             const sortBy = filterSort ? filterSort.value : 'points';
@@ -283,7 +269,6 @@ async function init() {
         filterCountry?.addEventListener('change', runFilters);
         filterSort?.addEventListener('change', runFilters);
 
-        // Live search filter
         filterSearch?.addEventListener('input', () => {
             const query = filterSearch.value.trim().toLowerCase();
             const filtered = allTeams.filter(t =>

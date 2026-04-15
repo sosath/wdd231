@@ -75,8 +75,6 @@ function openMatchModal(match) {
     openModal(`${match.homeTeam} vs ${match.awayTeam}`, content);
 }
 
-// ── Render Mini Standings (Top 5) ────────────────────────────
-
 function renderMiniStandings(teams, container) {
     if (!teams) return;
     const sorted = [...teams].sort((a, b) => b.points - a.points);
@@ -93,8 +91,6 @@ function renderMiniStandings(teams, container) {
     container.innerHTML = html;
 }
 
-// ── Update Favorite Buttons ──────────────────────────────────
-
 function updateFavButtons() {
     document.querySelectorAll('.btn-fav[data-team-id]').forEach(btn => {
         const id = parseInt(btn.dataset.teamId, 10);
@@ -104,8 +100,6 @@ function updateFavButtons() {
         btn.title = faved ? 'Remove from favorites' : 'Add to favorites';
     });
 }
-
-// ── Render Favorite Teams ────────────────────────────────────
 
 function renderFavorites(teams, container) {
     const favIds = getFavorites();
@@ -132,8 +126,6 @@ function renderFavorites(teams, container) {
     });
 }
 
-// ── Init ─────────────────────────────────────────────────────
-
 async function init() {
     initModal();
 
@@ -150,7 +142,6 @@ async function init() {
             fetchJSON('data/matches.json')
         ]);
 
-        // Display all 20 matches on the home page dashboard
         if (matchesContainer) {
             renderMatches(matches, matchesContainer);
         }
@@ -163,7 +154,6 @@ async function init() {
             renderFavorites(teams, favoritesContainer);
         }
 
-        // Update stats counters
         const totalGoals = matches
             .filter(m => m.status === 'finished')
             .reduce((sum, m) => sum + (m.homeScore || 0) + (m.awayScore || 0), 0);
@@ -180,7 +170,6 @@ async function init() {
         if (totalGoalsEl) totalGoalsEl.textContent = totalGoals;
 
         if (totalCountriesEl) {
-            // Use Set + map to get unique countries
             const countries = new Set(teams.map(t => t.country));
             totalCountriesEl.textContent = countries.size;
         }
