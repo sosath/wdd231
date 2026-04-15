@@ -1,0 +1,43 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .bg { fill: #2c3e50; }
+      .accent { fill: #f39c12; }
+      .text-main { font-family: 'Montserrat', sans-serif; font-size: 72px; font-weight: 700; fill: white; }
+      .text-sub { font-family: 'Poppins', sans-serif; font-size: 36px; fill: #f39c12; }
+      .text-desc { font-family: 'Inter', sans-serif; font-size: 24px; fill: rgba(255,255,255,0.8); }
+    </style>
+  </defs>
+  
+  <rect class="bg" width="1200" height="630"/>
+  
+  <rect class="accent" x="0" y="0" width="1200" height="8"/>
+  
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#f39c12" stroke-width="4"/>
+  <circle cx="100" cy="100" r="35" fill="none" stroke="#f39c12" stroke-width="2"/>
+  <text x="100" y="105" text-anchor="middle" dominant-baseline="middle" font-size="48" fill="#f39c12">⚽</text>
+  
+  <text x="180" y="80" class="text-main">EuroStats</text>
+  <text x="180" y="135" class="text-sub">Football Analytics Hub</text>
+  
+  <line x1="180" y1="160" x2="900" y2="160" stroke="#f39c12" stroke-width="2"/>
+  
+  <text x="180" y="250" class="text-desc">UEFA Champions League Statistics</text>
+  <text x="180" y="295" class="text-desc">Live Standings • Match Analysis • Data-Driven Insights</text>
+  
+  <rect x="180" y="350" width="180" height="120" fill="rgba(243, 156, 18, 0.1)" rx="8"/>
+  <text x="270" y="395" text-anchor="middle" font-size="40" fill="#f39c12">📊</text>
+  <text x="270" y="450" text-anchor="middle" class="text-sub" style="font-size: 18px;">Win Probability</text>
+  
+  <rect x="420" y="350" width="180" height="120" fill="rgba(243, 156, 18, 0.1)" rx="8"/>
+  <text x="510" y="395" text-anchor="middle" font-size="40">⚽</text>
+  <text x="510" y="450" text-anchor="middle" class="text-sub" style="font-size: 18px;">Expected Goals (xG)</text>
+  
+  <rect x="660" y="350" width="180" height="120" fill="rgba(243, 156, 18, 0.1)" rx="8"/>
+  <text x="750" y="395" text-anchor="middle" font-size="40">🔄</text>
+  <text x="750" y="450" text-anchor="middle" class="text-sub" style="font-size: 18px;">Head-to-Head</text>
+  
+  <rect x="900" y="350" width="180" height="120" fill="rgba(243, 156, 18, 0.1)" rx="8"/>
+  <text x="990" y="395" text-anchor="middle" font-size="40">📈</text>
+  <text x="990" y="450" text-anchor="middle" class="text-sub" style="font-size: 18px;">Team Ratings</text>
+</svg>

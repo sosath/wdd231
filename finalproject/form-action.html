@@ -9,6 +9,8 @@
     <title>Subscription Confirmed – EuroStats</title>
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
     <link
@@ -46,11 +48,11 @@
     </header>
 
     <main>
-        <div class="container" style="padding-top:2rem;padding-bottom:2rem;">
+        <div class="container container-padded">
             <div class="action-card">
-                <div style="font-size:3rem;margin-bottom:0.75rem;text-align:center" aria-hidden="true">✅</div>
+                <div class="action-success-icon" aria-hidden="true">✅</div>
                 <h2>You're Subscribed!</h2>
-                <p style="color:var(--light-text);font-size:0.9rem;margin-bottom:0">
+                <p class="action-success-message">
                     Thanks for registering with EuroStats. Here's a summary of what you submitted:
                 </p>
 
@@ -58,10 +60,9 @@
                     <p class="no-results">No submission data found. <a href="form.html">Go back to the form</a>.</p>
                 </div>
 
-                <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+                <div class="action-button-group">
                     <a href="index.html" class="btn btn-primary">Back to Home</a>
-                    <a href="form.html" class="btn btn-outline"
-                        style="color:var(--primary);border-color:var(--border)">Edit Registration</a>
+                    <a href="form.html" class="btn btn-outline">Edit Registration</a>
                 </div>
             </div>
         </div>
